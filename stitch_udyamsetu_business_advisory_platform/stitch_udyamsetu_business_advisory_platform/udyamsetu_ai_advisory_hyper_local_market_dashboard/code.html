@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UdyamSetu | उद्यमसेतु - AI Business Advisory &amp; Market Intelligence</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#005137",
+            "on-secondary-fixed": "#002114",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#85f8c4",
+            "surface-container-low": "#eff4ff",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#d2e4ff",
+            "tertiary": "#1c0a00",
+            "on-primary-fixed": "#001c37",
+            "on-tertiary-container": "#d27200",
+            "surface-container-highest": "#d5e3fc",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-bright": "#f8f9ff",
+            "background": "#f8f9ff",
+            "on-primary-container": "#768dad",
+            "secondary-fixed-dim": "#68dba9",
+            "on-surface": "#0d1c2e",
+            "outline-variant": "#c4c6ce",
+            "tertiary-fixed-dim": "#ffb77d",
+            "secondary": "#006c4a",
+            "inverse-primary": "#b0c8eb",
+            "on-surface-variant": "#43474d",
+            "surface": "#f8f9ff",
+            "on-primary-fixed-variant": "#314865",
+            "surface-variant": "#d5e3fc",
+            "on-secondary-container": "#00714e",
+            "inverse-surface": "#233144",
+            "surface-container-high": "#dce9ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#6e3900",
+            "on-error-container": "#93000a",
+            "outline": "#74777e",
+            "surface-container": "#e6eeff",
+            "secondary-container": "#82f5c1",
+            "surface-tint": "#49607e",
+            "primary-fixed-dim": "#b0c8eb",
+            "on-tertiary-fixed": "#2f1500",
+            "primary-container": "#0a2540",
+            "on-background": "#0d1c2e",
+            "tertiary-fixed": "#ffdcc3",
+            "tertiary-container": "#3b1c00",
+            "surface-dim": "#ccdbf3",
+            "inverse-on-surface": "#eaf1ff",
+            "primary": "#000f22"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-lg": "3rem",
+            "margin-md": "2rem",
+            "gutter-md": "1.5rem",
+            "gutter-lg": "2rem",
+            "gutter": "1rem",
+            "space-2xl": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "numeric-data": ["Inter"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "bilingual-indicator": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"]
+          },
+          "fontSize": {
+            "numeric-data": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "display-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "bilingual-indicator": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-level-1 {
+      box-shadow: 0px 1px 3px rgba(10, 37, 64, 0.04), 0px 4px 12px rgba(10, 37, 64, 0.02);
+    }
+    .shadow-level-2 {
+      box-shadow: 0px 6px 16px rgba(10, 37, 64, 0.06), 0px 2px 4px rgba(10, 37, 64, 0.03);
+    }
+    .glass-surface {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md antialiased pb-20 md:pb-12">
+<!-- TopAppBar Anchor from Shared Components -->
+<header class="bg-surface-container-lowest text-primary border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-6 h-16 transition-colors duration-150">
+<div class="max-w-7xl w-full mx-auto flex items-center justify-between">
+<!-- Brand Cluster -->
+<div class="flex items-center space-x-3">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg overflow-hidden border border-outline-variant bg-surface-container-low shadow-sm">
+<img alt="UdyamSetu Enterprise Seal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WgqPPEaYCbNn58_GTBXOpfNvkzv-0nDF4ureN9yxnrYXa9EdmD6ZUrBDNHIf88hlsE3uwdxPds6QhPVCduTz-wYXS1CJ3QzO--PwS68JFa-FOk8AEYDEBNDvRR8fCvPtSmOcq8dldA9ssKZPtMOeiqo165hLJAwnYegdzJ50dwV7EAY8DLfFCnRMmjpZ-2l7aOGaMXRt8iALq9uf2QxGHUmMFeqiLC-dNdp49uoUPITufIoUyCAv2ydw7r"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">UdyamSetu</span>
+<span class="text-xs px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium">उद्यमसेतु</span>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">राष्ट्रीय सूक्ष्म उद्यम संवर्धन मंच</span>
+</div>
+</div>
+<!-- Desktop Nav & Live Regional Context -->
+<div class="hidden md:flex items-center space-x-4">
+<!-- Location Pill -->
+<div class="flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">location_on</span>
+<span class="font-label-md text-label-md">📍 फंदा कलां, भोपाल, म.प्र. (Phanda Kalan, Bhopal, MP)</span>
+</div>
+<!-- Global Navigation Desktop Links -->
+<nav class="flex items-center space-x-1 ml-2">
+<a class="text-primary font-semibold px-3 py-2 rounded-lg bg-surface-container font-label-md text-label-md" href="#dashboard">
+            Dashboard / परामर्श
+          </a>
+<a class="text-on-surface-variant hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-md text-label-md transition-colors duration-150" href="#schemes">
+            Schemes / योजनाएं
+          </a>
+<a class="text-on-surface-variant hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-md text-label-md transition-colors duration-150" href="#simulator">
+            Simulator / गणना
+          </a>
+<a class="text-on-surface-variant hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-md text-label-md transition-colors duration-150" href="#roadmap">
+            Roadmap / लक्ष्य
+          </a>
+</nav>
+</div>
+<!-- Actions: Vernacular AI Voice & Utilities -->
+<div class="flex items-center space-x-2.5">
+<!-- Vernacular AI Voice Assistant Pill -->
+<button class="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary shadow-sm hover:bg-opacity-95 active:scale-95 transition-transform duration-100 ease-out font-label-md text-label-md cursor-pointer">
+<span class="material-symbols-outlined text-base animate-pulse">mic</span>
+<span class="whitespace-nowrap">🎙 पूछें AI सारथी</span>
+</button>
+<button aria-label="Translate options" class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150 relative">
+<span class="material-symbols-outlined">translate</span>
+</button>
+<button aria-label="Notifications" class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Secondary Header Sub-bar: Geolocation Strip -->
+<div class="md:hidden pt-16 bg-surface-container-lowest border-b border-outline-variant px-4 py-2 flex items-center justify-between">
+<div class="flex items-center space-x-1 text-on-surface truncate">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+<span class="font-label-sm text-label-sm truncate">📍 फंदा कलां, भोपाल, म.प्र. (Phanda Kalan, Bhopal)</span>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-medium shrink-0">Live APMC</span>
+</div>
+<!-- Main Content Layout -->
+<main class="max-w-7xl w-full mx-auto px-4 md:px-6 pt-6 md:pt-24 space-y-6">
+<!-- Entrepreneur Greeting Banner -->
+<div class="relative overflow-hidden rounded-xl bg-primary-container text-on-primary p-5 md:p-6 shadow-level-1">
+<!-- Background Ambient Geometry -->
+<div class="absolute -right-8 -bottom-12 w-64 h-64 rounded-full bg-secondary opacity-15 blur-2xl pointer-events-none"></div>
+<div class="absolute right-32 top-0 w-32 h-32 rounded-full bg-primary-fixed opacity-10 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="flex items-center space-x-2">
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-secondary text-on-secondary">सत्यापित उद्यम प्रोफाइल (MSME Verified)</span>
+<span class="text-xs text-on-primary-container">Udyam: UDYAM-MP-04-002891</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:font-headline-xl md:text-headline-xl font-bold tracking-tight text-white mt-1.5">
+            नमस्ते रामसेवक जी! <span class="text-primary-fixed font-normal text-lg md:text-xl block md:inline">(Good Morning Ramsevak Sharma)</span>
+</h1>
+<p class="font-body-md text-body-md text-slate-200 mt-1 max-w-2xl">
+            आपके स्थानीय क्षेत्र <strong>फंदा कलां (Phanda Kalan Block)</strong> में कच्चे माल व कृषि उपज डेटा के आधार पर 1 नया उच्च-लाभ अवसर पहचाना गया है।
+          </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/10 text-center min-w-[120px]">
+<span class="font-bilingual-indicator text-bilingual-indicator text-slate-300 uppercase block">उपलब्ध सब्सिडी</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">₹10.5 लाख</span>
+<span class="text-[10px] text-slate-300 block">PMEGP 35% अनुदान</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/10 text-center min-w-[120px]">
+<span class="font-bilingual-indicator text-bilingual-indicator text-slate-300 uppercase block">क्रेडिट प्री-अप्रूवल</span>
+<span class="font-headline-sm text-headline-sm font-bold text-white">₹15,00,000</span>
+<span class="text-[10px] text-slate-300 block">MPFC / BoB Mudra</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRIMARY AI BUSINESS RECOMMENDATION CARD (HERO) -->
+<section class="bg-surface-container-lowest rounded-2xl border-2 border-secondary/30 p-5 md:p-7 shadow-level-2 relative overflow-hidden">
+<!-- Top Edge Accent -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-secondary-container to-primary-container"></div>
+<!-- Card Header Cluster -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-outline-variant/60">
+<div class="space-y-1.5">
+<div class="flex items-center space-x-2">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary/10 text-secondary border border-secondary/30 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+              AI अनुशंसित अवसर (Top AI Opportunity)
+            </span>
+<span class="text-xs text-on-surface-variant font-medium">अपडेट: आज सुबह 07:30 बजे</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold">
+            मिनी दाल मिल व पैकेजिंग इकाई
+            <span class="text-on-surface-variant font-medium text-lg md:text-xl block sm:inline"> (Mini Pulses Processing &amp; 1kg Packaging Unit)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            सीहोर एवं करोंद मंडी से सीधी चना व तुअर दाल छंटाई, पॉलिशिंग एवं 1 कि.ग्रा. पाउच ब्रांडिंग क्लस्टर।
+          </p>
+</div>
+<!-- Composite Feasibility Score Gauge -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant flex items-center space-x-4 min-w-[280px]">
+<div class="relative flex items-center justify-center w-16 h-16 rounded-full bg-surface-container-lowest border-4 border-secondary shadow-sm">
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary">84</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">व्यवहार्यता सूचकांक</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">84/100</span>
+<span class="font-bilingual-indicator text-bilingual-indicator text-secondary font-semibold">अत्यधिक व्यवहार्य (High Viability)</span>
+</div>
+</div>
+</div>
+<!-- 4 Core Metric Pills (Bento Grid Style) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 my-5">
+<!-- Metric 1: Raw Material -->
+<div class="bg-surface-bright rounded-xl p-3.5 border border-outline-variant/80 flex flex-col justify-between hover:border-secondary/50 transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">कच्चा माल उपलब्धता</span>
+<span class="material-symbols-outlined text-secondary text-xl">grain</span>
+</div>
+<div>
+<div class="flex items-baseline space-x-1.5">
+<span class="font-numeric-data text-numeric-data text-primary">92/100</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">प्रचुर (High)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">22 किमी दायरे में 5 प्रमुख कृषि मंडियां</p>
+</div>
+</div>
+<!-- Metric 2: Local Retail Demand -->
+<div class="bg-surface-bright rounded-xl p-3.5 border border-outline-variant/80 flex flex-col justify-between hover:border-secondary/50 transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">स्थानीय खुदरा मांग</span>
+<span class="material-symbols-outlined text-secondary text-xl">shopping_cart</span>
+</div>
+<div>
+<div class="flex items-baseline space-x-1.5">
+<span class="font-numeric-data text-numeric-data text-primary">88/100</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">तीव्र (High)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">14 किराना स्टोर दैनिक पैकेट मांग में</p>
+</div>
+</div>
+<!-- Metric 3: Competition Intensity -->
+<div class="bg-surface-bright rounded-xl p-3.5 border border-outline-variant/80 flex flex-col justify-between hover:border-secondary/50 transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">प्रतिस्पर्धा घनत्व</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-xl">store</span>
+</div>
+<div>
+<div class="flex items-baseline space-x-1.5">
+<span class="font-numeric-data text-numeric-data text-primary">निम्न-मध्यम</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">(Low-Mod)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">15 किमी दायरे में मात्र 3 सक्रिय इकाइयां</p>
+</div>
+</div>
+<!-- Metric 4: Subsidy Match -->
+<div class="bg-surface-bright rounded-xl p-3.5 border border-outline-variant/80 flex flex-col justify-between hover:border-secondary/50 transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">सरकारी सब्सिडी पात्रता</span>
+<span class="material-symbols-outlined text-secondary text-xl">verified</span>
+</div>
+<div>
+<div class="flex items-baseline space-x-1.5">
+<span class="font-numeric-data text-numeric-data text-primary">95%</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">पात्र (Eligible)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">PMEGP ग्रामीण + मुद्रा ऋण अनुशंसित</p>
+</div>
+</div>
+</div>
+<!-- Explainability Card & Actions -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/70 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-xl text-primary-container">psychology</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-label-md text-label-md font-bold text-primary">Why this recommendation? (एआई तर्क देखें)</span>
+<span class="px-2 py-0.2 rounded bg-secondary/15 text-secondary text-[11px] font-semibold">Margin Proof</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              "5 Mandis within 22km; local wholesale price difference yields direct <strong class="text-secondary font-semibold">₹18/kg net profit margin</strong> on 1kg consumer packaging."
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-2.5 rounded-lg border border-outline text-primary font-semibold hover:bg-surface-container transition-colors text-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">tune</span>
+            पैरामीटर बदलें (Adjust)
+          </button>
+<button class="px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-semibold hover:bg-opacity-95 shadow-sm active:scale-95 transition-transform text-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">rocket_launch</span>
+            योजना लागू करें (Proceed)
+          </button>
+</div>
+</div>
+</section>
+<!-- HYPER-LOCAL MARKET INTELLIGENCE (SPLIT 2-COLUMN LAYOUT) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Column: Interactive Map Widget (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl border border-outline-variant p-5 shadow-level-1 space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-outline-variant/60 pb-3">
+<div>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-secondary text-xl">map</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">
+                हाईपर-लोकल मार्केट रडार (Cluster Map)
+              </h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bhopal - Sehore Highway Corridor (5km Radius Feed)</p>
+</div>
+<!-- Map Layers Toggles -->
+<div class="flex items-center bg-surface-container rounded-lg p-1 space-x-1 border border-outline-variant text-xs">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-primary font-semibold shadow-xs">
+              Mandi Prices
+            </button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-medium">
+              Kirana Gap
+            </button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-medium">
+              Transport Routes
+            </button>
+</div>
+</div>
+<!-- Stylized Map Canvas Container -->
+<div class="relative w-full h-80 rounded-xl overflow-hidden bg-slate-100 border border-outline-variant flex items-center justify-center">
+<!-- Simulated Map Cartography Grid -->
+<div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+<!-- Road Corridors (SVG Paths) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<!-- NH-46 Highway Line -->
+<line stroke="#cbd5e1" stroke-linecap="round" stroke-width="12" x1="10%" x2="90%" y1="90%" y2="20%"></line>
+<line stroke="#ffffff" stroke-linecap="round" stroke-width="8" x1="10%" x2="90%" y1="90%" y2="20%"></line>
+<line stroke="#94a3b8" stroke-dasharray="6 6" stroke-width="2" x1="10%" x2="90%" y1="90%" y2="20%"></line>
+<!-- Secondary Bypass -->
+<path d="M 50 160 Q 200 240 400 120 T 650 80" fill="none" stroke="#e2e8f0" stroke-width="6"></path>
+<!-- 5km Radius Radial Circle around Enterprise -->
+<circle cx="50%" cy="50%" fill="rgba(0, 108, 74, 0.05)" r="90" stroke="#006c4a" stroke-dasharray="4 3" stroke-width="1.5"></circle>
+</svg>
+<!-- Marker 1: Proposed Enterprise Site (Phanda Kalan Center) -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg border-2 border-white ring-4 ring-secondary/20 animate-bounce">
+<span class="material-symbols-outlined text-lg">factory</span>
+</div>
+<span class="mt-1 px-2 py-0.5 rounded bg-primary-container text-white text-[11px] font-bold shadow whitespace-nowrap">
+              प्रस्तावित इकाई (Your Mill Site)
+            </span>
+</div>
+<!-- Marker 2: APMC Mandi Karond (Raw Material Sourcing) -->
+<div class="absolute top-16 left-1/4 z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-md border-2 border-white cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">agriculture</span>
+</div>
+<div class="bg-white/90 backdrop-blur px-2 py-0.5 rounded border border-slate-200 text-[10px] font-semibold text-slate-800 mt-0.5 shadow-xs">
+              APMC करोंद (18km)
+            </div>
+</div>
+<!-- Marker 3: Competitor Mills (Only 2 Active) -->
+<div class="absolute top-24 right-1/4 z-10 flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-slate-600 text-white flex items-center justify-center shadow-md border-2 border-white">
+<span class="material-symbols-outlined text-xs">block</span>
+</div>
+<div class="bg-white/90 backdrop-blur px-1.5 py-0.5 rounded border border-slate-200 text-[10px] text-slate-600 mt-0.5">
+              प्रतिद्वंद्वी मिल (12km)
+            </div>
+</div>
+<!-- Marker 4: Kirana Cluster (Demand Center) -->
+<div class="absolute bottom-16 right-1/3 z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md border-2 border-white">
+<span class="material-symbols-outlined text-sm">storefront</span>
+</div>
+<div class="bg-white/95 backdrop-blur px-2 py-0.5 rounded border border-emerald-300 text-[10px] font-bold text-emerald-800 mt-0.5">
+              14 किराना क्लस्टर (3.2km)
+            </div>
+</div>
+<!-- Marker 5: MPFC Bank Branch for Disbursement -->
+<div class="absolute bottom-10 left-1/5 z-10 flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center shadow-md border-2 border-white">
+<span class="material-symbols-outlined text-xs">account_balance</span>
+</div>
+<div class="bg-white/90 backdrop-blur px-1.5 py-0.5 rounded border border-slate-200 text-[10px] font-medium text-slate-700 mt-0.5">
+              MPFC सीहोर शाखा (Loan Hub)
+            </div>
+</div>
+<!-- Map Legend Overlay -->
+<div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-outline-variant text-[11px] flex items-center space-x-3 z-30 shadow-xs">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> आप</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> मंडी</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span> मांग क्लस्टर</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-blue-700"></span> ऋण शाखा</span>
+</div>
+<!-- Radius Indicator -->
+<div class="absolute top-2 right-2 bg-white/90 px-2.5 py-1 rounded text-[11px] font-semibold text-slate-700 border border-slate-200">
+            रेंज: 5.0 KM परिधि
+          </div>
+</div>
+<!-- Quick Route & Transit Insights -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+<div class="p-2.5 rounded-lg bg-surface-bright border border-outline-variant">
+<span class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant block">मंडी ट्रांजिट समय</span>
+<span class="font-numeric-data text-numeric-data text-primary">28 मिनट</span>
+<span class="text-[11px] text-on-surface-variant block">सड़क गुणवत्ता: पक्की NH46</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-bright border border-outline-variant">
+<span class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant block">वितरण लागत (स्थानीय)</span>
+<span class="font-numeric-data text-numeric-data text-secondary">₹1.20 / कि.ग्रा.</span>
+<span class="text-[11px] text-on-surface-variant block">ई-रिक्शा / छोटा हाथी सुलभ</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-bright border border-outline-variant">
+<span class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant block">गोदाम भंडारण क्षमता</span>
+<span class="font-numeric-data text-numeric-data text-primary">450 क्विंटल</span>
+<span class="text-[11px] text-on-surface-variant block">सीहोर वेयरहाउसिंग कॉर्प</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Market Telemetry Cards (5 Cols) -->
+<div class="lg:col-span-5 space-y-4">
+<!-- Telemetry Card 1: Mandi Procurement vs Packaged Retail Index -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant p-4 md:p-5 shadow-level-1">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">मूल्य स्प्रेड सूचकांक (Price Index)</h4>
+</div>
+<span class="text-xs px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Live Arbitrage</span>
+</div>
+<!-- Price Arbitrage Visual Bar -->
+<div class="space-y-3 pt-1">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-xs text-on-surface-variant block">थोक कच्ची तुअर खरीद (Mandi Rate)</span>
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">₹68.00 <span class="text-xs font-normal text-on-surface-variant">/ कि.ग्रा.</span></span>
+</div>
+<div class="text-right">
+<span class="text-xs text-on-surface-variant block">1kg ब्रांडेड पैकेट खुदरा (Retail Price)</span>
+<span class="font-headline-md text-headline-md font-extrabold text-secondary">₹115.00 <span class="text-xs font-normal text-on-surface-variant">/ कि.ग्रा.</span></span>
+</div>
+</div>
+<!-- Visual Progress Split -->
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-slate-400 h-full w-[59%]" title="Raw Material Cost 59%"></div>
+<div class="bg-amber-400 h-full w-[16%]" title="Processing &amp; Packaging 16%"></div>
+<div class="bg-secondary h-full w-[25%]" title="Net Margin Spread 25%"></div>
+</div>
+<div class="flex justify-between text-[11px] text-on-surface-variant pt-1 border-t border-slate-100">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-slate-400"></span> खरीद ₹68</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400"></span> प्रोसेसिंग ₹18</span>
+<span class="flex items-center gap-1 font-bold text-secondary"><span class="w-2 h-2 rounded-full bg-secondary"></span> शुद्ध लाभ ₹29/kg</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Card 2: Unmet Demand Gap -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant p-4 md:p-5 shadow-level-1">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary">production_quantity_limits</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">अपूरित स्थानीय मांग (Demand Gap)</h4>
+</div>
+<span class="text-xs text-error font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> उच्च घाटा
+            </span>
+</div>
+<div class="bg-surface-bright rounded-xl p-3.5 border border-outline-variant/70 mt-2">
+<div class="flex items-baseline space-x-2">
+<span class="font-headline-xl text-headline-xl font-extrabold text-primary">620</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface-variant">क्विंटल/माह</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+<strong>620 Quintals/month unserved local demand:</strong> फंदा कलां व 8 आसपास के ग्रामीण हाट वर्तमान में इंदौर से महंगा पैकेट मंगा रहे हैं।
+            </p>
+</div>
+</div>
+<!-- Telemetry Card 3: Supplier Direct Connect (FPO Tie-ups) -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant p-4 md:p-5 shadow-level-1">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary">handshake</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">सत्यापित आपूर्तिकर्ता (FPO Connect)</h4>
+</div>
+<span class="text-xs px-2 py-0.5 rounded bg-secondary/10 text-secondary font-semibold">3 FPO तैयार</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mb-3">
+            3 Verified farmer FPOs ready for harvest direct supply agreements (बिचौलिया मुक्त दर):
+          </p>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-bright border border-outline-variant text-xs">
+<div>
+<span class="font-bold text-primary block">सीहोर प्रगतिशील कृषक FPO</span>
+<span class="text-on-surface-variant">चना/तुअर • 180 किसान सदस्य</span>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-semibold">अनुबंध हेतु तैयार</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-bright border border-outline-variant text-xs">
+<div>
+<span class="font-bold text-primary block">नर्मदांचल एग्रो प्रोड्यूसर कंपनी</span>
+<span class="text-on-surface-variant">ग्रेड-A मूंग/तुअर • बिल गारंटी</span>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-semibold">अनुबंध हेतु तैयार</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RISK RADAR & MITIGATION SECTION -->
+<section class="bg-surface-container-lowest rounded-2xl border border-outline-variant p-5 md:p-7 shadow-level-1 space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-outline-variant/60 pb-4">
+<div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-2xl">shield</span>
+<h3 class="font-headline-xl text-headline-xl font-bold text-primary">
+              जोखिम विश्लेषण एवं समाधान (Risk Radar &amp; Mitigation)
+            </h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            संभावित व्यावसायिक जोखिमों का 5-बिंदु मूल्यांकन और स्वतः सुरक्षा उपाय।
+          </p>
+</div>
+<div class="flex items-center space-x-2 text-xs">
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-secondary border border-secondary/30 font-medium">समग्र जोखिम: न्यूनतम</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium">बैंक स्वीकार्य (Bankable)</span>
+</div>
+</div>
+<!-- 3 Key Mitigation Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Pillar 1: Price Volatility -->
+<div class="rounded-xl border border-outline-variant p-4 bg-surface-bright flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">1. दलहन मूल्य अस्थिरता</span>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-amber-100 text-amber-800 border border-amber-200">
+                मध्यम (Medium)
+              </span>
+</div>
+<span class="text-xs text-on-surface-variant block mt-1">Price Volatility &amp; Seasonal Swing</span>
+</div>
+<div class="bg-white p-3 rounded-lg border border-slate-200">
+<div class="flex items-center space-x-1.5 text-xs font-bold text-secondary mb-1">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>एआई निवारण उपाय (AI Mitigation)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              वेयरहाउस रसीद (e-NWR) आधारित सुरक्षित भंडारण; मंडी मूल्य गिरावट के समय नाबार्ड समर्थित अग्रिम हेजिंग।
+            </p>
+</div>
+</div>
+<!-- Pillar 2: Power Reliability -->
+<div class="rounded-xl border border-outline-variant p-4 bg-surface-bright flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">2. बिजली निरंतरता व लोड</span>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-100 text-secondary border border-emerald-200">
+                न्यून (Low)
+              </span>
+</div>
+<span class="text-xs text-on-surface-variant block mt-1">Power Reliability &amp; Feeder Availability</span>
+</div>
+<div class="bg-white p-3 rounded-lg border border-slate-200">
+<div class="flex items-center space-x-1.5 text-xs font-bold text-secondary mb-1">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>एआई निवारण उपाय (AI Mitigation)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              फंदा कलां में 3-फेज ग्रामीण औद्योगिक फीडर सक्रिय (22 घंटे अनवरत विद्युत आपूर्ति उपलब्ध)।
+            </p>
+</div>
+</div>
+<!-- Pillar 3: Working Capital -->
+<div class="rounded-xl border border-outline-variant p-4 bg-surface-bright flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">3. कार्यशील पूंजी तरलता</span>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-100 text-secondary border border-emerald-200">
+                न्यून (Low)
+              </span>
+</div>
+<span class="text-xs text-on-surface-variant block mt-1">Working Capital &amp; Inventory Liquidity</span>
+</div>
+<div class="bg-white p-3 rounded-lg border border-slate-200">
+<div class="flex items-center space-x-1.5 text-xs font-bold text-secondary mb-1">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>एआई निवारण उपाय (AI Mitigation)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              मुद्रा कैश क्रेडिट (Mudra CC Limit ₹2 Lakhs) द्वारा स्टॉक कवरेज एवं बैंक ऑफ बड़ौदा प्रत्यक्ष लिंक।
+            </p>
+</div>
+</div>
+</div>
+<!-- Action Cluster: Bankable DPR & WhatsApp Share -->
+<div class="flex flex-col sm:flex-row items-center justify-between pt-3 border-t border-outline-variant/60 gap-3">
+<div class="text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">verified_user</span>
+<span>प्रोजेक्ट रिपोर्ट SIDBI एवं राज्य वित्तीय निगम (MPFC) मानकों के अनुसार अनुमोदित स्वरूप में है।</span>
+</div>
+<div class="flex items-center space-x-3 w-full sm:w-auto">
+<!-- WhatsApp Direct Share -->
+<button class="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg border border-emerald-600 text-emerald-800 font-semibold bg-emerald-50 hover:bg-emerald-100 active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg text-emerald-600">chat</span>
+<span>व्हाट्सएप पर शेयर करें (Share on WhatsApp)</span>
+</button>
+<!-- Download Bankable DPR -->
+<button class="flex-1 sm:flex-initial px-5 py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-primary-container active:scale-95 transition-all text-sm flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>डाउनलोड विस्तृत डीपीआर रिपोर्ट (Download Bankable DPR)</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Anchor from Shared Components (Mobile Only Sticky Shell) -->
+<nav class="md:hidden bg-surface-container-lowest text-primary fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-2 safe-bottom shadow-[0px_-2px_8px_rgba(10,37,64,0.04)]">
+<!-- Item 1: Dashboard (ACTIVE MATCH) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-lg px-3 py-1.5 font-semibold active:scale-95 transition-transform duration-100 ease-out" href="#dashboard">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-sm text-label-sm mt-0.5">Dashboard / मुख्य</span>
+</a>
+<!-- Item 2: Schemes -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#schemes">
+<span class="material-symbols-outlined text-xl">verified</span>
+<span class="font-label-sm text-label-sm mt-0.5">Schemes / योजनाएं</span>
+</a>
+<!-- Item 3: Simulator -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#simulator">
+<span class="material-symbols-outlined text-xl">calculate</span>
+<span class="font-label-sm text-label-sm mt-0.5">Simulator / गणना</span>
+</a>
+<!-- Item 4: Roadmap -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#roadmap">
+<span class="material-symbols-outlined text-xl">timeline</span>
+<span class="font-label-sm text-label-sm mt-0.5">Roadmap / लक्ष्य</span>
+</a>
+<!-- Item 5: Advisory -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#advisory">
+<span class="material-symbols-outlined text-xl">smart_toy</span>
+<span class="font-label-sm text-label-sm mt-0.5">Advisory / सलाह</span>
+</a>
+</nav>
+</body></html>
