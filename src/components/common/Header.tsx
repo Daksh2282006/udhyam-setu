@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
   const navLinks = [
     { path: '/', label: 'Home / मुख्य' },
     { path: '/analyze', label: 'Wizard / सेटअप' },
+    { path: '/report', label: 'Report / रिपोर्ट' },
     { path: '/dashboard', label: 'Dashboard / परामर्श' },
     { path: '/dashboard/market', label: 'Market / बाजार' },
     { path: '/dashboard/simulator', label: 'Simulator / सिमुलेटर' },

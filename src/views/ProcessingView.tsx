@@ -23,7 +23,7 @@ export const ProcessingView: React.FC = () => {
         } else {
           clearInterval(interval);
           setTimeout(() => {
-            navigate('/dashboard');
+            navigate('/report');
           }, 600);
           return prev;
         }

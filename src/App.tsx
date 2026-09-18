@@ -20,6 +20,7 @@ import { AssistantView } from './views/AssistantView';
 import { BlueprintView } from './views/BlueprintView';
 import { AdminView } from './views/AdminView';
 import { SettingsView } from './views/SettingsView';
+import { FeasibilityReportView } from './views/FeasibilityReportView';
 
 export const App: React.FC = () => {
   return (
@@ -43,6 +44,11 @@ export const App: React.FC = () => {
               <Route path="/analyze/skills" element={<OnboardingWizardView />} />
               <Route path="/analyze/goals" element={<OnboardingWizardView />} />
               <Route path="/analyze/processing" element={<ProcessingView />} />
+
+              {/* Business Feasibility Report (Agneyaa Reference Model) */}
+              <Route path="/report" element={<FeasibilityReportView />} />
+              <Route path="/feasibility-report" element={<FeasibilityReportView />} />
+              <Route path="/dashboard/report" element={<FeasibilityReportView />} />
 
               {/* Main AI Business Dashboard & Modules */}
               <Route path="/dashboard" element={<DashboardView />} />

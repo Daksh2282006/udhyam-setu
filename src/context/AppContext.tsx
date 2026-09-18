@@ -30,11 +30,13 @@ interface AppContextType {
   demoMode: boolean;
   setDemoMode: (mode: boolean) => void;
   resetToDemoBaseline: () => void;
+  loadProfilePreset: (preset: 'komal' | 'rameshwar') => void;
 }
 
-const DEFAULT_PROFILE: EntrepreneurProfile = {
+export const DEFAULT_PROFILE: EntrepreneurProfile = {
   id: 'ent-bhopal-01',
   name: 'Rameshwar Patel',
+  businessIdea: 'Mini Dal Mill & Agro Processing',
   businessName: 'Shree Ganesh Agro Dal Processing',
   phone: '+91 98260 12345',
   udyamNumber: 'UDYAM-MP-04-002891',
@@ -71,7 +73,54 @@ const DEFAULT_PROFILE: EntrepreneurProfile = {
     seekExportLicense: false,
     targetTimelineMonths: 3
   },
+  landOwnership: 'owned',
+  targetCustomers: 'Local Kirana Stores & Mandi',
   createdAt: '2026-09-16'
+};
+
+export const KOMAL_DAIRY_PROFILE: EntrepreneurProfile = {
+  id: 'ent-betul-01',
+  name: 'Komal',
+  businessIdea: 'Dairy Business',
+  businessName: 'Komal Dairy & Milk Collection Center',
+  phone: '+91 94250 54321',
+  udyamNumber: 'UDYAM-MP-08-004128',
+  category: BUSINESS_CATEGORIES[1], // Dairy
+  location: {
+    state: 'Madhya Pradesh',
+    district: 'Betul',
+    block: 'Multai',
+    village: 'Multai',
+    zone: 'Rural',
+    apmcMandi: 'Betul APMC Mandi (18km)',
+    mandiDistanceKm: 18.5,
+    nearestCompetitorDistanceKm: 4.2
+  },
+  finance: {
+    ownCapital: 100000,
+    loanRequired: 675000,
+    totalOutlay: 1000000,
+    collateralAvailable: false,
+    targetSubsidyScheme: 'NABARD Dairy Entrepreneurship'
+  },
+  skills: {
+    education: '10th Standard Passed (10वीं उत्तीर्ण)',
+    experienceYears: '1-2 Years Workshop Experience',
+    socialCategory: 'OBC',
+    hasEdpTraining: true,
+    priorDomainExp: 'Dairy cow rearing and milk collection'
+  },
+  goals: {
+    targetMarket: 'Residencial Areas Household',
+    applyPmegpSubsidy: true,
+    procureMachinery: true,
+    tieUpRetailers: true,
+    seekExportLicense: false,
+    targetTimelineMonths: 6
+  },
+  landOwnership: 'none',
+  targetCustomers: 'Residencial Areas Household',
+  createdAt: '2026-09-17'
 };
 
 const DEFAULT_SIMULATOR: SimulatorParams = {
@@ -333,6 +382,21 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setActionPlan(DEFAULT_ACTION_PLAN);
   };
 
+  const loadProfilePreset = (preset: 'komal' | 'rameshwar') => {
+    if (preset === 'komal') {
+      setProfileState(KOMAL_DAIRY_PROFILE);
+      setSimulatorParams({
+        salesVolume: 120,
+        rawMaterialCost: 42,
+        sellingPrice: 66,
+        interestRate: 6.5
+      });
+    } else {
+      setProfileState(DEFAULT_PROFILE);
+      setSimulatorParams(DEFAULT_SIMULATOR);
+    }
+  };
+
   // Dynamically compute current financial metrics
   const isSpecialCategory = ['OBC', 'SC', 'ST', 'Women'].includes(profile.skills.socialCategory);
   const metrics = FinancialService.calculateFinancials(
@@ -362,7 +426,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         setIsAssistantOpen,
         demoMode,
         setDemoMode,
-        resetToDemoBaseline
+        resetToDemoBaseline,
+        loadProfilePreset
       }}
     >
       {children}

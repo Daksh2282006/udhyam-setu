@@ -32,18 +32,26 @@ export const DashboardView: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <button
+            onClick={() => navigate('/report')}
+            className="px-3.5 py-2 rounded-lg bg-emerald-700 text-white font-label-md text-label-md flex items-center gap-1.5 hover:bg-emerald-800 transition-colors shadow-xs cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-[18px]">description</span>
+            <span>Feasibility Report / रिपोर्ट</span>
+          </button>
+
           <button
             onClick={() => setShowXai(!showXai)}
-            className="px-3.5 py-2 rounded-lg bg-surface-container-low border border-outline-variant/40 text-primary font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container-high transition-colors cursor-pointer"
+            className="px-3 py-2 rounded-lg bg-surface-container-low border border-outline-variant/40 text-primary font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container-high transition-colors cursor-pointer"
           >
             <span className="material-symbols-outlined text-secondary text-[18px]">info</span>
-            <span>Why Am I Seeing This? (XAI)</span>
+            <span>XAI Factors</span>
           </button>
 
           <button
             onClick={() => navigate('/dashboard/simulator')}
-            className="px-4 py-2 rounded-lg bg-secondary text-white font-label-md text-label-md flex items-center gap-1.5 elevation-2 hover:bg-secondary/90 cursor-pointer"
+            className="px-3.5 py-2 rounded-lg bg-secondary text-white font-label-md text-label-md flex items-center gap-1.5 elevation-2 hover:bg-secondary/90 cursor-pointer"
           >
             <span className="material-symbols-outlined text-[18px]">calculate</span>
             <span>Run Simulator</span>

@@ -62,6 +62,7 @@ export interface EntrepreneurProfile {
   id: string;
   name: string;
   businessName: string;
+  businessIdea?: string;
   phone: string;
   udyamNumber?: string;
   category: BusinessCategory;
@@ -69,6 +70,8 @@ export interface EntrepreneurProfile {
   finance: FinancialProfile;
   skills: SkillsProfile;
   goals: GoalsProfile;
+  landOwnership?: 'none' | 'owned' | 'rented' | string;
+  targetCustomers?: string;
   createdAt: string;
 }
 
