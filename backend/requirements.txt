@@ -1,5 +1,8 @@
 fastapi>=0.115.0
 uvicorn>=0.31.0
 pydantic>=2.9.0
+<<<<<<< HEAD
 httpx>=0.27.0
 python-dotenv>=1.0.0
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7

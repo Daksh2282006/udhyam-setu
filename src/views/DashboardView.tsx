@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { BusinessAnalysisService } from '../services/businessAnalysisService';
 
 export const DashboardView: React.FC = () => {
   const navigate = useNavigate();
+<<<<<<< HEAD
   const { profile, metrics, t } = useApp();
   const [showXai, setShowXai] = useState(false);
   const [activePinId, setActivePinId] = useState<string | null>(null);
@@ -45,6 +50,14 @@ export const DashboardView: React.FC = () => {
     }
   };
 
+=======
+  const { profile, metrics } = useApp();
+  const [showXai, setShowXai] = useState(false);
+  const [activePinId, setActivePinId] = useState<string | null>(null);
+
+  const analysis = BusinessAnalysisService.analyzeEnterprise(profile);
+
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
       {/* Entrepreneur Context Header */}
@@ -52,20 +65,32 @@ export const DashboardView: React.FC = () => {
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <span className="text-headline-md font-headline-md font-bold text-primary">
+<<<<<<< HEAD
               नमस्ते, {profile.name} 👋
             </span>
             <span className="px-2.5 py-0.5 rounded-full text-bilingual-indicator font-bilingual-indicator bg-secondary-container/40 text-secondary border border-secondary/20 font-bold">
               {t('strongViability')}
+=======
+              Good morning, {profile.name} 👋
+            </span>
+            <span className="px-2.5 py-0.5 rounded-full text-bilingual-indicator font-bilingual-indicator bg-secondary-container/40 text-secondary border border-secondary/20">
+              Verified Business Model
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
             </span>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[18px] text-secondary">location_on</span>
             <span>
+<<<<<<< HEAD
               {profile.businessName} • {profile.location.block}, {profile.location.district} ({profile.location.state}) - PIN: {profile.location.pincode || '462030'}
+=======
+              Enterprise: <strong>{profile.businessName}</strong> • {profile.location.block}, {profile.location.district} Cluster ({profile.location.state})
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
             </span>
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="flex items-center gap-3 flex-wrap">
           <button
             onClick={() => setShowXai(!showXai)}
@@ -83,21 +108,48 @@ export const DashboardView: React.FC = () => {
           >
             <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
             <span>{t('exportPdf')} / Feasibility Report</span>
+=======
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <button
+            onClick={() => navigate('/report')}
+            className="px-3.5 py-2 rounded-lg bg-emerald-700 text-white font-label-md text-label-md flex items-center gap-1.5 hover:bg-emerald-800 transition-colors shadow-xs cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-[18px]">description</span>
+            <span>Feasibility Report / रिपोर्ट</span>
+          </button>
+
+          <button
+            onClick={() => setShowXai(!showXai)}
+            className="px-3 py-2 rounded-lg bg-surface-container-low border border-outline-variant/40 text-primary font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container-high transition-colors cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-secondary text-[18px]">info</span>
+            <span>XAI Factors</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
           </button>
 
           <button
             onClick={() => navigate('/dashboard/simulator')}
+<<<<<<< HEAD
             className="px-4 py-2 rounded-lg bg-secondary text-white font-label-md text-label-md flex items-center gap-1.5 elevation-2 hover:bg-secondary/90 cursor-pointer shadow-sm"
           >
             <span className="material-symbols-outlined text-[18px]">calculate</span>
             <span>{t('simulator')}</span>
+=======
+            className="px-3.5 py-2 rounded-lg bg-secondary text-white font-label-md text-label-md flex items-center gap-1.5 elevation-2 hover:bg-secondary/90 cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-[18px]">calculate</span>
+            <span>Run Simulator</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
           </button>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* ---- PDF-captured Business Report Section ---- */}
       <div ref={reportRef} className="space-y-8">
 
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
       {/* AI Feasibility Score & Core KPIs Bento Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Primary AI Feasibility Score Gauge (5 Columns) */}
@@ -105,7 +157,11 @@ export const DashboardView: React.FC = () => {
           <div>
             <div className="flex items-center justify-between">
               <span className="font-label-md text-label-md text-on-surface-variant font-semibold">
+<<<<<<< HEAD
                 {t('feasibilityIndex')}
+=======
+                AI FEASIBILITY INDEX (व्यवहार्यता सूचकांक)
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               </span>
               <span className="px-2.5 py-0.5 rounded-full text-bilingual-indicator font-bilingual-indicator bg-secondary-container text-on-secondary-container font-bold">
                 {analysis.label}
@@ -183,7 +239,11 @@ export const DashboardView: React.FC = () => {
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-primary flex flex-col justify-between">
             <div className="flex items-center justify-between">
+<<<<<<< HEAD
               <span className="font-label-md text-label-md text-on-surface-variant font-semibold">{t('totalOutlay')}</span>
+=======
+              <span className="font-label-md text-label-md text-on-surface-variant">Total Project Outlay</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               <span className="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
             </div>
             <div className="my-3">
@@ -191,7 +251,11 @@ export const DashboardView: React.FC = () => {
                 ₹{profile.finance.totalOutlay.toLocaleString('en-IN')}
               </div>
               <div className="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">
+<<<<<<< HEAD
                 Fixed Assets + Working Capital
+=======
+                कुल परियोजना लागत (Fixed + Working)
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               </div>
             </div>
             <div className="text-body-sm text-on-surface-variant flex items-center gap-1">
@@ -201,7 +265,11 @@ export const DashboardView: React.FC = () => {
 
           <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-secondary flex flex-col justify-between">
             <div className="flex items-center justify-between">
+<<<<<<< HEAD
               <span className="font-label-md text-label-md text-on-surface-variant font-semibold">{t('monthlyProfit')}</span>
+=======
+              <span className="font-label-md text-label-md text-on-surface-variant">Monthly Net Profit (Est.)</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               <span className="material-symbols-outlined text-secondary text-[20px]">trending_up</span>
             </div>
             <div className="my-3">
@@ -209,17 +277,29 @@ export const DashboardView: React.FC = () => {
                 ₹{metrics.monthlyNetProfit.toLocaleString('en-IN')}
               </div>
               <div className="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">
+<<<<<<< HEAD
                 Net Margin: {metrics.netMarginPct}%
               </div>
             </div>
             <div className="text-body-sm text-on-surface-variant">
               <span>Annual: ₹{metrics.annualNetProfit.toLocaleString('en-IN')}</span>
+=======
+                अनुमानित मासिक शुद्ध लाभ
+              </div>
+            </div>
+            <div className="text-body-sm text-on-surface-variant">
+              <span>Net Margin: <strong>{metrics.netMarginPct}%</strong> on sales</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
             </div>
           </div>
 
           <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-primary flex flex-col justify-between">
             <div className="flex items-center justify-between">
+<<<<<<< HEAD
               <span className="font-label-md text-label-md text-on-surface-variant font-semibold">{t('breakEven')}</span>
+=======
+              <span className="font-label-md text-label-md text-on-surface-variant">Break-Even Period</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               <span className="material-symbols-outlined text-primary text-[20px]">hourglass_bottom</span>
             </div>
             <div className="my-3">
@@ -227,7 +307,11 @@ export const DashboardView: React.FC = () => {
                 {metrics.breakEvenMonths} Months
               </div>
               <div className="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">
+<<<<<<< HEAD
                 Capital Amortization
+=======
+                लागत वसूली समय सीमा
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               </div>
             </div>
             <div className="text-body-sm text-on-surface-variant">
@@ -237,7 +321,11 @@ export const DashboardView: React.FC = () => {
 
           <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-secondary flex flex-col justify-between">
             <div className="flex items-center justify-between">
+<<<<<<< HEAD
               <span className="font-label-md text-label-md text-on-surface-variant font-semibold">{t('subsidyBenefit')}</span>
+=======
+              <span className="font-label-md text-label-md text-on-surface-variant">PMEGP Subsidy Benefit</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               <span className="material-symbols-outlined text-secondary text-[20px]">stars</span>
             </div>
             <div className="my-3">
@@ -245,11 +333,19 @@ export const DashboardView: React.FC = () => {
                 ₹{metrics.promoterSubsidyGrant.toLocaleString('en-IN')}
               </div>
               <div className="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">
+<<<<<<< HEAD
                 Govt. Capital Grant
               </div>
             </div>
             <div className="text-body-sm text-on-surface-variant">
               <span>Non-refundable Govt. grant in bank escrow</span>
+=======
+                35% ग्रामीण अनुदान सहायता
+              </div>
+            </div>
+            <div className="text-body-sm text-on-surface-variant">
+              <span>Non-refundable Govt. grant locked in escrow</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
             </div>
           </div>
         </div>
@@ -491,9 +587,12 @@ export const DashboardView: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* End PDF-captured section */}
       </div>
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     </div>
   );
 };

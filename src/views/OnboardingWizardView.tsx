@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { BUSINESS_CATEGORIES } from '../data/categories';
 import { GEOGRAPHY_DATA } from '../data/geography';
+<<<<<<< HEAD
 import { LocationService } from '../services/locationService';
 import { GlobalMicAdvisorModal } from '../components/voice/GlobalMicAdvisorModal';
 
@@ -47,6 +48,20 @@ export const OnboardingWizardView: React.FC = () => {
     ruralZone: profile.location.zone === 'Rural' ? 'Zone A Rural' : 'Zone B Semi-Urban',
     powerTariffPerUnit: 5.00
   };
+=======
+
+export const OnboardingWizardView: React.FC = () => {
+  const navigate = useNavigate();
+  const { profile, updateProfile } = useApp();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [voiceBannerVisible, setVoiceBannerVisible] = useState(false);
+
+  const selectedCategory = profile.category;
+  const states = Object.keys(GEOGRAPHY_DATA);
+  const currentStateData = GEOGRAPHY_DATA[profile.location.state] || GEOGRAPHY_DATA['Madhya Pradesh'];
+  const districts = Object.keys(currentStateData.districts);
+  const currentDistrictData = currentStateData.districts[profile.location.district] || currentStateData.districts['Bhopal'];
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 
   // Handle Category Select
   const handleSelectCategory = (catId: string) => {
@@ -63,6 +78,7 @@ export const OnboardingWizardView: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
   // Search locality / colony via India Post Directory
   const handleSearchLocality = async (query: string) => {
     setSearchLocalityText(query);
@@ -173,6 +189,44 @@ export const OnboardingWizardView: React.FC = () => {
   // Voice fill simulation
   const handleVoiceSimulate = () => {
     setIsMicModalOpen(true);
+=======
+  // Voice fill simulation
+  const handleVoiceSimulate = () => {
+    setVoiceBannerVisible(true);
+    updateProfile({
+      name: 'Rameshwar Patel',
+      businessName: 'Shree Ganesh Agro Dal Processing',
+      category: BUSINESS_CATEGORIES[0],
+      location: {
+        state: 'Madhya Pradesh',
+        district: 'Bhopal',
+        block: 'Phanda Kalan',
+        village: 'Phanda Kalan',
+        zone: 'Rural',
+        apmcMandi: 'Sehore APMC Mandi (14km)',
+        mandiDistanceKm: 14.2,
+        nearestCompetitorDistanceKm: 3.8
+      },
+      finance: {
+        ownCapital: 350000,
+        loanRequired: 500000,
+        totalOutlay: 850000,
+        collateralAvailable: false,
+        targetSubsidyScheme: 'PMEGP 35%'
+      },
+      skills: {
+        education: '10th Standard Passed (10वीं उत्तीर्ण)',
+        experienceYears: '3+ Years in Agro Trading / Mandi',
+        socialCategory: 'OBC',
+        hasEdpTraining: true,
+        priorDomainExp: 'Food processing & retail'
+      }
+    });
+
+    setTimeout(() => {
+      setCurrentStep(5);
+    }, 1000);
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   };
 
   const handleNext = () => {
@@ -209,11 +263,19 @@ export const OnboardingWizardView: React.FC = () => {
           </div>
 
           <button
+<<<<<<< HEAD
             onClick={() => setIsMicModalOpen(true)}
             className="inline-flex items-center gap-2 px-4 py-2.5 bg-secondary text-white rounded-xl text-label-md font-bold transition-all active:scale-95 shadow-md hover:bg-secondary/90 cursor-pointer"
           >
             <span className="material-symbols-outlined text-white text-[20px]">mic</span>
             <span>Bhashini AI Voice Auto-Fill / बोलकर भरें</span>
+=======
+            onClick={handleVoiceSimulate}
+            className="inline-flex items-center gap-2 px-3.5 py-2 bg-secondary-container/40 hover:bg-secondary-container text-on-secondary-container rounded-lg text-label-md font-label-md transition-all active:scale-95 border border-secondary/20 cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-secondary text-[20px]">mic</span>
+            <span>Auto-Fill With Voice / बोलकर भरें</span>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
           </button>
         </div>
 
@@ -345,6 +407,7 @@ export const OnboardingWizardView: React.FC = () => {
         {/* STEP 2: LOCATION */}
         {currentStep === 2 && (
           <div className="space-y-6 animate-in fade-in duration-200">
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2 mb-1">
@@ -459,6 +522,22 @@ export const OnboardingWizardView: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+=======
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="px-2.5 py-0.5 rounded-full bg-primary text-white text-[11px] font-semibold">Step 2 of 5</span>
+                <span className="text-label-sm font-label-sm text-secondary font-bold">कार्यस्थल चयन</span>
+              </div>
+              <h3 className="font-headline-md text-headline-md text-primary font-bold">
+                Enterprise Location / कार्यस्थल का चयन
+              </h3>
+              <p className="font-body-sm text-body-sm text-on-surface-variant">
+                Used to cross-reference rural population indices, mandi arrival volumes, and transport links.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               <div>
                 <label className="block font-label-md text-label-md text-primary mb-1.5">
                   State / राज्य
@@ -479,7 +558,11 @@ export const OnboardingWizardView: React.FC = () => {
                   className="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md focus:border-primary focus:ring-1 focus:ring-primary"
                 >
                   {states.map(s => (
+<<<<<<< HEAD
                     <option key={s} value={s}>{s} ({GEOGRAPHY_DATA[s]?.nameHi || s})</option>
+=======
+                    <option key={s} value={s}>{s} ({GEOGRAPHY_DATA[s].nameHi})</option>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
                   ))}
                 </select>
               </div>
@@ -492,7 +575,11 @@ export const OnboardingWizardView: React.FC = () => {
                   value={profile.location.district}
                   onChange={(e) => {
                     const newDist = e.target.value;
+<<<<<<< HEAD
                     const firstBlock = currentStateData?.districts[newDist]?.blocks[0] || 'Phanda Kalan';
+=======
+                    const firstBlock = currentStateData.districts[newDist]?.blocks[0] || 'Phanda Kalan';
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
                     updateProfile({
                       location: {
                         ...profile.location,
@@ -504,7 +591,11 @@ export const OnboardingWizardView: React.FC = () => {
                   className="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md focus:border-primary focus:ring-1 focus:ring-primary"
                 >
                   {districts.map(d => (
+<<<<<<< HEAD
                     <option key={d} value={d}>{d} ({currentStateData?.districts[d]?.nameHi || d})</option>
+=======
+                    <option key={d} value={d}>{d} ({currentStateData.districts[d]?.nameHi})</option>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
                   ))}
                 </select>
               </div>
@@ -526,11 +617,16 @@ export const OnboardingWizardView: React.FC = () => {
                   }}
                   className="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md focus:border-primary focus:ring-1 focus:ring-primary"
                 >
+<<<<<<< HEAD
                   {(currentDistrictData?.blocks || [profile.location.block || 'Phanda Kalan']).map(b => (
+=======
+                  {currentDistrictData.blocks.map(b => (
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
                     <option key={b} value={b}>{b}</option>
                   ))}
                 </select>
               </div>
+<<<<<<< HEAD
 
               <div>
                 <label className="block font-label-md text-label-md text-primary mb-1.5 flex items-center justify-between">
@@ -598,6 +694,24 @@ export const OnboardingWizardView: React.FC = () => {
               </div>
               <span className="text-secondary font-bold text-label-sm bg-secondary-container/40 px-3 py-1 rounded-full whitespace-nowrap self-start sm:self-auto border border-secondary/30">
                 {profile.location.zone === 'Rural' ? '🌾 Zone A Rural (35% Subsidy)' : '🏙️ Zone B Urban (25% Subsidy)'}
+=======
+            </div>
+
+            <div className="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-secondary text-[28px]">pin_drop</span>
+                <div>
+                  <div className="font-label-md text-label-md text-primary font-bold">
+                    Location Telemetry Verified: {profile.location.block} ({profile.location.district})
+                  </div>
+                  <div className="text-body-sm text-on-surface-variant">
+                    Classified as Rural Area: Qualifies for maximum 35% PMEGP subsidy tier. Mandi: {currentDistrictData.primaryMandis[0]}.
+                  </div>
+                </div>
+              </div>
+              <span className="text-secondary font-bold text-label-sm bg-secondary-container/40 px-2.5 py-1 rounded-full whitespace-nowrap">
+                Zone A Rural
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
               </span>
             </div>
           </div>
@@ -889,12 +1003,15 @@ export const OnboardingWizardView: React.FC = () => {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Bhashini AI Multilingual Voice Advisor Modal */}
       <GlobalMicAdvisorModal
         isOpen={isMicModalOpen}
         onClose={() => setIsMicModalOpen(false)}
       />
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     </section>
   );
 };

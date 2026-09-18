@@ -44,6 +44,7 @@ export class AssistantService {
   }
 
   /**
+<<<<<<< HEAD
    * Text-to-Speech Synthesis across 13 Indian languages
    */
   static speak(text: string, lang: string = 'hi') {
@@ -68,6 +69,15 @@ export class AssistantService {
       };
 
       utterance.lang = langLocaleMap[lang] || 'hi-IN';
+=======
+   * Browser Text-to-Speech Synthesis
+   */
+  static speak(text: string, lang: 'hi-IN' | 'en-IN' = 'hi-IN') {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel(); // Stop any active speech
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang;
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
       utterance.rate = 0.95;
       utterance.pitch = 1.0;
       window.speechSynthesis.speak(utterance);

@@ -42,6 +42,7 @@ class ReportGenerateRequest(BaseModel):
     state: str = "Madhya Pradesh"
     category: str = "Dal Mill & Agro Processing"
     total_outlay: float = 850000.0
+<<<<<<< HEAD
 
 # Bhashini & Voice Models
 class BhashiniASRRequest(BaseModel):
@@ -67,3 +68,5 @@ class VoiceAdvisoryRequest(BaseModel):
 class ReverseGeocodeRequest(BaseModel):
     latitude: float
     longitude: float
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7

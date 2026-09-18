@@ -1,13 +1,17 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+<<<<<<< HEAD
 import urllib.request
 import json
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 from backend.models import (
     BusinessAnalyzeRequest,
     FinancialCalculateRequest,
     MarketAnalyzeRequest,
     SchemesMatchRequest,
     AssistantChatRequest,
+<<<<<<< HEAD
     ReportGenerateRequest,
     BhashiniASRRequest,
     BhashiniTranslateRequest,
@@ -21,6 +25,15 @@ app = FastAPI(
     title="UdyamSetu Enterprise & Bhashini Multilingual API",
     description="AI-Powered Hyper-Local Business Advisory & Multilingual Speech/Text Services for Bharat Micro-Enterprises",
     version="2.5.0"
+=======
+    ReportGenerateRequest
+)
+
+app = FastAPI(
+    title="UdyamSetu Enterprise API",
+    description="AI-Powered Hyper-Local Business Advisory & Financial Structuring Platform for Bharat Micro-Enterprises",
+    version="2.4.0"
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 )
 
 # Enable CORS for frontend integration
@@ -37,6 +50,7 @@ def read_root():
     return {
         "platform": "UdyamSetu | उद्यमसेतु",
         "status": "Operational",
+<<<<<<< HEAD
         "version": "2.5.0 (SIH 2026 - Bhashini AI Edition)",
         "supported_languages_count": len(SUPPORTED_LANGUAGES),
         "supported_languages": SUPPORTED_LANGUAGES,
@@ -218,6 +232,15 @@ async def reverse_geocode_location(req: ReverseGeocodeRequest):
 
 @app.post("/api/business/analyze")
 def analyze_business(req: BusinessAnalyzeRequest):
+=======
+        "version": "2.4.0 (SIH 2026)",
+        "docs_url": "/docs"
+    }
+
+@app.post("/api/business/analyze")
+def analyze_business(req: BusinessAnalyzeRequest):
+    # Deterministic scoring
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     capital_ratio = req.own_capital / (req.total_outlay or 1)
     capital_fit = 95 if 0.25 <= capital_ratio <= 0.45 else 80
     demand_score = 92 if req.zone == "Rural" else 80

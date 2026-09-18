@@ -104,6 +104,7 @@ export const GEOGRAPHY_DATA: Record<string, StateData> = {
         powerTariffPerUnit: 5.30,
       }
     }
+<<<<<<< HEAD
   },
   'Maharashtra': {
     name: 'Maharashtra',
@@ -230,5 +231,7 @@ export const GEOGRAPHY_DATA: Record<string, StateData> = {
         powerTariffPerUnit: 6.20,
       }
     }
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   }
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../../context/AppContext';
 import { AssistantService } from '../../services/assistantService';
+<<<<<<< HEAD
 import { GlobalMicAdvisorModal } from '../voice/GlobalMicAdvisorModal';
 
 export const VoiceAssistantWidget: React.FC = () => {
@@ -8,6 +9,13 @@ export const VoiceAssistantWidget: React.FC = () => {
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
   const [isVoiceModalOpen, setIsVoiceModalOpen] = useState(false);
+=======
+
+export const VoiceAssistantWidget: React.FC = () => {
+  const { profile, metrics, chatHistory, addChatMessage, isAssistantOpen, setIsAssistantOpen } = useApp();
+  const [inputText, setInputText] = useState('');
+  const [isListening, setIsListening] = useState(false);
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   const [speechError, setSpeechError] = useState<string | null>(null);
   const chatBottomRef = useRef<HTMLDivElement>(null);
 
@@ -95,7 +103,11 @@ export const VoiceAssistantWidget: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <aside className="no-print fixed bottom-16 md:bottom-6 right-4 md:right-8 z-50">
+=======
+    <aside className="fixed bottom-16 md:bottom-6 right-4 md:right-8 z-50">
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
       <div className="relative">
         {/* Expanded Voice Assistant Dialog Card */}
         {isAssistantOpen && (
@@ -113,6 +125,7 @@ export const VoiceAssistantWidget: React.FC = () => {
                   </span>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center gap-1">
                 <button
                   onClick={() => setIsVoiceModalOpen(true)}
@@ -133,6 +146,18 @@ export const VoiceAssistantWidget: React.FC = () => {
                   <span className="material-symbols-outlined text-[20px]">close</span>
                 </button>
               </div>
+=======
+              <button
+                onClick={() => {
+                  AssistantService.stopSpeaking();
+                  setIsAssistantOpen(false);
+                }}
+                className="text-on-surface-variant hover:text-primary p-1 rounded-lg hover:bg-surface-container-low transition-colors"
+                title="Close"
+              >
+                <span className="material-symbols-outlined text-[20px]">close</span>
+              </button>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
             </div>
 
             {/* Speech error toast */}
@@ -246,7 +271,11 @@ export const VoiceAssistantWidget: React.FC = () => {
 
         {/* Floating Trigger Button */}
         <button
+<<<<<<< HEAD
           onClick={() => setIsVoiceModalOpen(true)}
+=======
+          onClick={() => setIsAssistantOpen(!isAssistantOpen)}
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
           className="flex items-center gap-2.5 px-4 py-3 bg-secondary hover:bg-secondary/90 text-on-secondary rounded-full elevation-3 shadow-xl active:scale-95 transition-all group cursor-pointer"
         >
           <span className="relative flex h-3 w-3">
@@ -254,6 +283,7 @@ export const VoiceAssistantWidget: React.FC = () => {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary-fixed"></span>
           </span>
           <span className="material-symbols-outlined text-[24px]">mic</span>
+<<<<<<< HEAD
           <span className="font-label-md text-label-md font-bold pr-1">{t('askSaarthi')}</span>
         </button>
       </div>
@@ -263,6 +293,11 @@ export const VoiceAssistantWidget: React.FC = () => {
         isOpen={isVoiceModalOpen}
         onClose={() => setIsVoiceModalOpen(false)}
       />
+=======
+          <span className="font-label-md text-label-md font-bold pr-1">Ask Saarthi / सारथी</span>
+        </button>
+      </div>
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     </aside>
   );
 };

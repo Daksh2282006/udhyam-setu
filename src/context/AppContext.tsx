@@ -111,7 +111,11 @@ export const KOMAL_DAIRY_PROFILE: EntrepreneurProfile = {
     priorDomainExp: 'Dairy cow rearing and milk collection'
   },
   goals: {
+<<<<<<< HEAD
     targetMarket: 'Residential Areas Household',
+=======
+    targetMarket: 'Residencial Areas Household',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     applyPmegpSubsidy: true,
     procureMachinery: true,
     tieUpRetailers: true,
@@ -119,7 +123,11 @@ export const KOMAL_DAIRY_PROFILE: EntrepreneurProfile = {
     targetTimelineMonths: 6
   },
   landOwnership: 'none',
+<<<<<<< HEAD
   targetCustomers: 'Residential Areas Household',
+=======
+  targetCustomers: 'Residencial Areas Household',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   createdAt: '2026-09-17'
 };
 
@@ -264,9 +272,15 @@ const DEFAULT_ACTION_PLAN: ActionPlanPhase[] = [
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+<<<<<<< HEAD
   // Load state from localStorage or use English as default
   const [language, setLanguageState] = useState<Language>(() => {
     return (localStorage.getItem('udyamsetu_lang') as Language) || 'en';
+=======
+  // Load state from localStorage or use defaults
+  const [language, setLanguageState] = useState<Language>(() => {
+    return (localStorage.getItem('udyamsetu_lang') as Language) || 'hi';
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   });
 
   const [profile, setProfileState] = useState<EntrepreneurProfile>(() => {
@@ -289,14 +303,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       {
         id: 'c-1',
         sender: 'assistant',
+<<<<<<< HEAD
         text: 'Hello! I am your UdyamSetu AI Saarthi. How can I assist you with your business plan, machinery costs, or government subsidies today?',
+=======
+        text: 'नमस्ते रामेश्वर जी! मैं आपका UdyamSetu एआई सारथी हूँ। आप फंदा कलां दाल मिल परियोजना, 35% PMEGP सब्सिडी, या मशीनरी लागत के बारे में कुछ भी पूछ सकते हैं।',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
         timestamp: new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })
       }
     ];
   });
 
   const [isAssistantOpen, setIsAssistantOpen] = useState(false);
+<<<<<<< HEAD
   const [demoMode, setDemoMode] = useState(false);
+=======
+  const [demoMode, setDemoMode] = useState(true);
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 
   // Sync to localStorage
   useEffect(() => {
@@ -386,9 +408,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (preset === 'komal') {
       setProfileState(KOMAL_DAIRY_PROFILE);
       setSimulatorParams({
+<<<<<<< HEAD
         salesVolume: 80,
         rawMaterialCost: 42,
         sellingPrice: 62,
+=======
+        salesVolume: 120,
+        rawMaterialCost: 42,
+        sellingPrice: 66,
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
         interestRate: 6.5
       });
     } else {

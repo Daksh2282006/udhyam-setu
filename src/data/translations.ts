@@ -1,5 +1,6 @@
 import { Language } from '../types';
 
+<<<<<<< HEAD
 export interface LanguageInfo {
   code: Language;
   name: string;
@@ -23,10 +24,13 @@ export const SUPPORTED_LANGUAGES_LIST: LanguageInfo[] = [
   { code: 'ur', name: 'Urdu', nativeName: 'اردو', bhashiniCode: 'ur' }
 ];
 
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 export const TRANSLATIONS: Record<Language, Record<string, string>> = {
   en: {
     appName: 'UdyamSetu',
     appSubtitle: 'AI-Powered Business Advisory Platform',
+<<<<<<< HEAD
     msmeAligned: 'MSME Aligned',
     home: 'Home',
     wizard: 'Setup Wizard',
@@ -89,12 +93,30 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     ch6Desc: 'Selling loose commodities wholesale at lower rates rather than branded retail packaging.',
     solTitle: '7. The UdyamSetu Solution (उद्यमसेतु का संपूर्ण समाधान)',
     solDesc: 'Automates financial structuring, bank-ready DPR generation, and provides actionable daily milestone playbooks with sensitivity stress-testing.',
+=======
+    home: 'Home',
+    wizard: 'Wizard',
+    dashboard: 'Dashboard',
+    simulator: 'Simulator',
+    schemes: 'Schemes',
+    blueprint: '90-Day Plan',
+    admin: 'SIH Analytics',
+    settings: 'Settings',
+    askSaarthi: 'Ask Saarthi',
+    voicePrompt: 'Ask With Voice',
+    startAnalysis: 'Start Business Structuring',
+    exploreCaseStudy: 'Explore Live Bhopal Dal Mill Case Study',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     feasibilityIndex: 'AI Feasibility Index',
     strongViability: 'Strong Viability',
     totalOutlay: 'Total Project Outlay',
     monthlyProfit: 'Monthly Net Profit',
     breakEven: 'Break-Even Period',
+<<<<<<< HEAD
     subsidyBenefit: '35% Rural Subsidy Benefit',
+=======
+    subsidyBenefit: 'PMEGP Subsidy Benefit',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     whyAmISeeingThis: 'Why Am I Seeing This? (XAI)',
     clusterTelemetry: 'Hyper-Local Market Telemetry (15 KM Radius)',
     riskMatrix: 'Business Risk Matrix & Hedging Strategies',
@@ -102,6 +124,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     rawCost: 'Raw Material Purchase Price',
     sellingPrice: 'Selling Price (Retail Realization)',
     loanInterest: 'Loan Interest Rate (%)',
+<<<<<<< HEAD
     exportPdf: 'Export Executive PDF (DPR)',
     listenBrief: 'Listen Audio Brief',
     shareBank: 'Share with Bank Manager',
@@ -123,20 +146,34 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     extractedDetails: 'Auto-Extracted Business Profile',
     applyToWizard: 'Apply to Setup Wizard',
     quickPromptsLabel: 'Quick Spoken Voice Prompts'
+=======
+    exportPdf: 'Export Executive PDF',
+    listenBrief: 'Listen Audio Brief (Hindi)',
+    shareBank: 'Share with Bank Manager',
+    demoModeActive: 'Demo Mode: Live Bhopal Dal Mill Model',
+    resetDefault: 'Reset to Baseline'
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   },
   hi: {
     appName: 'उद्यमसेतु (UdyamSetu)',
     appSubtitle: 'एआई-संचालित सूक्ष्म उद्यम सलाहकार मंच',
+<<<<<<< HEAD
     msmeAligned: 'भारत सरकार MSME मान्यता प्राप्त',
     home: 'मुख्य पृष्ठ',
     wizard: 'सेटअप विज़ार्ड',
     dashboard: 'परामर्श डैशबोर्ड',
     market: 'बाज़ार रडार',
+=======
+    home: 'मुख्य पृष्ठ',
+    wizard: 'सेटअप विज़ार्ड',
+    dashboard: 'परामर्श डैशबोर्ड',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     simulator: 'वित्तीय सिमुलेटर',
     schemes: 'सरकारी योजनाएं',
     blueprint: '90-दिवसीय रोडमैप',
     admin: 'राष्ट्रीय विश्लेषण',
     settings: 'सेटिंग्स',
+<<<<<<< HEAD
     login: 'साइन इन (लॉगिन)',
     signup: 'नया खाता (साइन अप)',
     logout: 'लॉगआउट',
@@ -189,6 +226,12 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     ch6Desc: 'दाल को थोक में ₹74/किग्रा बेचने के बजाय ₹118/किग्रा में पैकेट बनाकर न बेच पाना।',
     solTitle: '7. उद्यमसेतु का संपूर्ण समाधान',
     solDesc: 'वित्तीय योजना, बैंक-स्वीकृत DPR और दैनिक कार्य योजना स्वतः तैयार करता है।',
+=======
+    askSaarthi: 'पूछें AI सारथी',
+    voicePrompt: 'बोलकर पूछें',
+    startAnalysis: 'योजना बनाएं (प्रारंभ करें)',
+    exploreCaseStudy: 'भोपाल दाल मिल केस स्टडी देखें',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     feasibilityIndex: 'व्यवहार्यता सूचकांक',
     strongViability: 'अत्यंत व्यवहार्य',
     totalOutlay: 'कुल परियोजना लागत',
@@ -206,6 +249,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     listenBrief: 'ऑडियो सार सुनें (हिन्दी)',
     shareBank: 'बैंक प्रबंधक को भेजें',
     demoModeActive: 'डेमो मोड: फंदा कलां, भोपाल दाल मिल',
+<<<<<<< HEAD
     resetDefault: 'पुनः सामान्य सेट करें',
     detectLocation: '📍 मेरी लोकेशन पता करें (GPS पिन)',
     locationDetecting: 'लोकेशन पहचानी जा रही है...',
@@ -223,20 +267,30 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     extractedDetails: 'ऑडियो से स्वतः पहचानी गई जानकारी',
     applyToWizard: 'विज़ार्ड में लागू करें',
     quickPromptsLabel: 'त्वरित सुझाव प्रश्न'
+=======
+    resetDefault: 'पुनः सामान्य सेट करें'
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   },
   bn: {
     appName: 'উদ্যমসেতু (UdyamSetu)',
     appSubtitle: 'এআই-চালিত গ্রামীণ ব্যবসা উপদেষ্টা প্ল্যাটফর্ম',
+<<<<<<< HEAD
     msmeAligned: 'MSME স্বীকৃত',
     home: 'মূল পাতা',
     wizard: 'সেটআপ উইজার্ড',
     dashboard: 'ড্যাশবোর্ড',
     market: 'বাজার রাডার',
+=======
+    home: 'মূল পাতা',
+    wizard: 'সেটআপ উইজার্ড',
+    dashboard: 'ড্যাশবোর্ড',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     simulator: 'সিমুলেটর',
     schemes: 'সরকারি প্রকল্প',
     blueprint: '৯০ দিনের পরিকল্পনা',
     admin: 'জাতীয় তথ্য',
     settings: 'সেটিংস',
+<<<<<<< HEAD
     login: 'সাইন ইন',
     signup: 'নতুন অ্যাকাউন্ট',
     logout: 'লগআউট',
@@ -289,15 +343,28 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     ch6Desc: 'প্যাকেটজাত না করে পাইকারিতে কম দামে বিক্রি।',
     solTitle: '৭. উদ্যমসেতু সমাধান',
     solDesc: 'সম্পূর্ণ স্বয়ংক্রিয় প্রকল্প রিপোর্ট ও দৈনিক কাজের পরিকল্পনা।',
+=======
+    askSaarthi: 'সারথিকে জিজ্ঞাসা করুন',
+    voicePrompt: 'মুখে বলুন',
+    startAnalysis: 'ব্যবসার পরিকল্পনা শুরু করুন',
+    exploreCaseStudy: 'কেস স্টাডি দেখুন',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     feasibilityIndex: 'সম্ভাব্যতা সূচক',
     strongViability: 'দৃঢ় সম্ভাব্যতা',
     totalOutlay: 'মোট প্রকল্পের ব্যয়',
     monthlyProfit: 'মাসিক লাভ',
     breakEven: 'ব্রেক-ইভেন সময়সীমা',
+<<<<<<< HEAD
     subsidyBenefit: '৩৫% সরকারি অনুদান সুবিধা',
     whyAmISeeingThis: 'এই সুপারিশ কেন? (XAI)',
     clusterTelemetry: 'স্থানীয় বাজার বিশ্লেষণ (১৫ কিমি)',
     riskMatrix: 'ঝুঁকি বিশ্লেষণ ও সুরক্ষা',
+=======
+    subsidyBenefit: 'সরকারি অনুদান সুবিধা',
+    whyAmISeeingThis: 'এই সুপারিশ কেন? (XAI)',
+    clusterTelemetry: 'স্থানীয় বাজার বিশ্লেষণ',
+    riskMatrix: 'ঝুঁকি বিশ্লেষণ',
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     salesVolume: 'মাসিক বিক্রয়ের পরিমাণ',
     rawCost: 'কাঁচামালের ক্রয়মূল্য',
     sellingPrice: 'বিক্রয়মূল্য',
@@ -306,6 +373,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     listenBrief: 'অডিও শুনুন',
     shareBank: 'ব্যাঙ্কে শেয়ার করুন',
     demoModeActive: 'ডেমো মোড সক্রিয়',
+<<<<<<< HEAD
     resetDefault: 'রিসেট করুন',
     detectLocation: '📍 আমার অবস্থান শনাক্ত করুন (GPS)',
     locationDetecting: 'অবস্থান শনাক্ত করা হচ্ছে...',
@@ -1323,5 +1391,42 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     extractedDetails: 'حاصل شدہ تفصیلات',
     applyToWizard: 'وزرڈ میں لاگو کریں',
     quickPromptsLabel: 'فوری سوالات'
+=======
+    resetDefault: 'রিসেট করুন'
+  },
+  ta: {
+    appName: 'உத்யம்சேது (UdyamSetu)',
+    appSubtitle: 'AI அடிப்படையிலான தொழில் ஆலோசனை தளம்',
+    home: 'முகப்பு',
+    wizard: 'அமைவு',
+    dashboard: 'டாஷ்போர்டு',
+    simulator: 'சிமுலேட்டர்',
+    schemes: 'அரசு திட்டங்கள்',
+    blueprint: '90-நாள் திட்டம்',
+    admin: 'புள்ளிவிவரங்கள்',
+    settings: 'அமைப்புகள்',
+    askSaarthi: 'AI சாரதியிடம் கேளுங்கள்',
+    voicePrompt: 'குரல் மூலம் கேளுங்கள்',
+    startAnalysis: 'திட்டமிடலைத் தொடங்குங்கள்',
+    exploreCaseStudy: 'மாதிரி திட்டத்தைக் காண்க',
+    feasibilityIndex: 'சாத்தியக்கூறு குறியீடு',
+    strongViability: 'வலுவான சாத்தியம்',
+    totalOutlay: 'மொத்த திட்ட செலவு',
+    monthlyProfit: 'மாத நிகர லாபம்',
+    breakEven: 'முதலீடு மீட்பு காலம்',
+    subsidyBenefit: 'மானிய பலன்',
+    whyAmISeeingThis: 'இந்த பரிந்துரை ஏன்? (XAI)',
+    clusterTelemetry: 'உள்ளூர் சந்தை பகுப்பாய்வு',
+    riskMatrix: 'வணிக அபாய மேலாண்மை',
+    salesVolume: 'மாத விற்பனை அளவு',
+    rawCost: 'மூலப்பொருள் கொள்முதல் விலை',
+    sellingPrice: 'விற்பனை விலை',
+    loanInterest: 'வங்கி கடன் வட்டி விகிதம்',
+    exportPdf: 'DPR பதிவிறக்கம் (PDF)',
+    listenBrief: 'ஆடியோ சுருக்கம் கேளுங்கள்',
+    shareBank: 'வங்கி மேலாளருக்கு அனுப்பவும்',
+    demoModeActive: 'டெமோ பயன்முறை செயலில் உள்ளது',
+    resetDefault: 'மீட்டமைக்கவும்'
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   }
 };

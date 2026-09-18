@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "html2canvas": "^1.4.1",
+<<<<<<< HEAD
     "html2pdf.js": "^0.14.0",
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
     "jspdf": "^2.5.2",
     "lucide-react": "^0.446.0",
     "react": "^18.3.1",

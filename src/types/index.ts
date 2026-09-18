@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type Language = 
   | 'en' // English
   | 'hi' // Hindi
@@ -12,6 +13,9 @@ export type Language =
   | 'or' // Odia
   | 'as' // Assamese
   | 'ur'; // Urdu
+=======
+export type Language = 'en' | 'hi' | 'bn' | 'ta';
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
 
 export interface BusinessCategory {
   id: string;
@@ -41,8 +45,11 @@ export interface LocationProfile {
   village: string;
   zone: 'Rural' | 'Semi-Urban' | 'Urban';
   pincode?: string;
+<<<<<<< HEAD
   latitude?: number;
   longitude?: number;
+=======
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   apmcMandi: string;
   mandiDistanceKm: number;
   nearestCompetitorDistanceKm: number;
@@ -76,8 +83,13 @@ export interface GoalsProfile {
 export interface EntrepreneurProfile {
   id: string;
   name: string;
+<<<<<<< HEAD
   businessIdea?: string;
   businessName: string;
+=======
+  businessName: string;
+  businessIdea?: string;
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   phone: string;
   udyamNumber?: string;
   category: BusinessCategory;
@@ -85,7 +97,11 @@ export interface EntrepreneurProfile {
   finance: FinancialProfile;
   skills: SkillsProfile;
   goals: GoalsProfile;
+<<<<<<< HEAD
   landOwnership?: string;
+=======
+  landOwnership?: 'none' | 'owned' | 'rented' | string;
+>>>>>>> f1737c756f8b193a0cc271a663e4f23a85f6dcb7
   targetCustomers?: string;
   createdAt: string;
 }
