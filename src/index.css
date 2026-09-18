@@ -61,15 +61,50 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Print styling for PDF export */
+/* Print styling for 2-Page PDF export */
 @media print {
-  header, nav, aside, .no-print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+  
+  header, nav, aside, footer, .no-print {
     display: none !important;
   }
+
   body {
     background: #ffffff !important;
-    color: #000000 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
+
+  main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  .report-page {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 10mm 0 !important;
+  }
+
+  .report-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+    margin-bottom: 0 !important;
+  }
+
   .print-only {
     display: block !important;
   }
