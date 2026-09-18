@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UdyamSetu | उद्यमसेतु - AI-Powered Business Advisory Platform</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#f8f9ff",
+            "tertiary": "#1c0a00",
+            "secondary-fixed": "#85f8c4",
+            "on-tertiary-fixed": "#2f1500",
+            "secondary": "#006c4a",
+            "surface-container": "#e6eeff",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#768dad",
+            "surface-dim": "#ccdbf3",
+            "primary": "#000f22",
+            "surface-container-highest": "#d5e3fc",
+            "secondary-fixed-dim": "#68dba9",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#eaf1ff",
+            "on-error": "#ffffff",
+            "background": "#f8f9ff",
+            "on-background": "#0d1c2e",
+            "on-primary-fixed-variant": "#314865",
+            "inverse-surface": "#233144",
+            "on-tertiary-container": "#d27200",
+            "tertiary-fixed-dim": "#ffb77d",
+            "secondary-container": "#82f5c1",
+            "tertiary-fixed": "#ffdcc3",
+            "inverse-primary": "#b0c8eb",
+            "tertiary-container": "#3b1c00",
+            "outline": "#74777e",
+            "on-tertiary-fixed-variant": "#6e3900",
+            "surface-bright": "#f8f9ff",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#dce9ff",
+            "surface-variant": "#d5e3fc",
+            "on-surface": "#0d1c2e",
+            "on-secondary-container": "#00714e",
+            "primary-fixed": "#d2e4ff",
+            "on-error-container": "#93000a",
+            "surface-tint": "#49607e",
+            "on-surface-variant": "#43474d",
+            "outline-variant": "#c4c6ce",
+            "on-primary-fixed": "#001c37",
+            "on-secondary-fixed-variant": "#005137",
+            "primary-fixed-dim": "#b0c8eb",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#0a2540",
+            "surface-container-low": "#eff4ff",
+            "on-secondary-fixed": "#002114"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "3rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-md": "1.5rem",
+            "space-md": "1rem",
+            "margin-md": "2rem",
+            "margin-lg": "3rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "gutter-lg": "2rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "bilingual-indicator": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "numeric-data": ["Inter"],
+            "label-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "headline-xl-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+            "bilingual-indicator": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+            "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+            "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "display-lg-mobile": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+            "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "numeric-data": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    .card-shadow {
+      box-shadow: 0px 1px 3px rgba(10, 37, 64, 0.04), 0px 4px 12px rgba(10, 37, 64, 0.02);
+    }
+    .elevation-2 {
+      box-shadow: 0px 6px 16px rgba(10, 37, 64, 0.06), 0px 2px 4px rgba(10, 37, 64, 0.03);
+    }
+    .glassmorphic {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TOP APP BAR (Source: Shared Component Anchor) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant/30 px-4 md:px-8 h-16 transition-all duration-200">
+<div class="max-w-7xl mx-auto h-full flex items-center justify-between gap-3">
+<!-- Brand & Identity Cluster -->
+<div class="flex items-center gap-3 cursor-pointer" onclick="switchView('landing')">
+<img alt="UdyamSetu Official Brandmark" class="w-9 h-9 object-contain rounded-lg border border-outline-variant/30 p-0.5 bg-surface-container-lowest" src="https://lh3.googleusercontent.com/aida/AEtjO1WgqPPEaYCbNn58_GTBXOpfNvkzv-0nDF4ureN9yxnrYXa9EdmD6ZUrBDNHIf88hlsE3uwdxPds6QhPVCduTz-wYXS1CJ3QzO--PwS68JFa-FOk8AEYDEBNDvRR8fCvPtSmOcq8dldA9ssKZPtMOeiqo165hLJAwnYegdzJ50dwV7EAY8DLfFCnRMmjpZ-2l7aOGaMXRt8iALq9uf2QxGHUmMFeqiLC-dNdp49uoUPITufIoUyCAv2ydw7r"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">UdyamSetu | उद्यमसेतु</span>
+<span class="hidden lg:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-bilingual-indicator font-bilingual-indicator bg-secondary-container/40 text-secondary border border-secondary/20">
+<span class="material-symbols-outlined text-[12px]">verified</span> MSME Aligned
+            </span>
+</div>
+<span class="hidden sm:inline text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">From Business Idea to Business Blueprint • भारत सरकार मान्यता प्राप्त</span>
+</div>
+</div>
+<!-- Navigation View Tabs (Desktop Switcher) -->
+<nav class="hidden xl:flex items-center gap-1 bg-surface-container-low p-1 rounded-xl border border-outline-variant/20">
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 font-semibold text-primary bg-surface-container-lowest shadow-sm" id="nav-landing" onclick="switchView('landing')">
+          Home / मुख्य
+        </button>
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="nav-onboarding" onclick="switchView('onboarding')">
+          Wizard / सेटअप
+        </button>
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="nav-dashboard" onclick="switchView('dashboard')">
+          Dashboard / परामर्श
+        </button>
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="nav-simulator" onclick="switchView('simulator')">
+          Simulator / सिमुलेटर
+        </button>
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="nav-schemes" onclick="switchView('schemes')">
+          Schemes / योजनाएं
+        </button>
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="nav-blueprint" onclick="switchView('blueprint')">
+          90-Day Plan / रोडमैप
+        </button>
+<button class="nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary" id="nav-admin" onclick="switchView('admin')">
+          SIH Analytics
+        </button>
+</nav>
+<!-- Utility Actions & Voice Query -->
+<div class="flex items-center gap-2">
+<!-- Voice Quick Trigger -->
+<button class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-tertiary-fixed/40 hover:bg-tertiary-fixed text-tertiary border border-on-tertiary-container/30 rounded-lg font-label-md text-label-md active:scale-95 transition-all" onclick="triggerAssistantPrompt('dal-mill')">
+<span class="material-symbols-outlined text-secondary text-[18px]">mic</span>
+<span>बोलकर पूछें</span>
+</button>
+<!-- Language Selector Dropdown -->
+<div class="relative">
+<select class="text-label-sm font-label-sm bg-surface-container-low text-primary border border-outline-variant/40 rounded-lg py-1.5 pl-2.5 pr-7 focus:ring-1 focus:ring-primary focus:border-primary cursor-pointer appearance-none" id="langSelect">
+<option value="en">English (EN)</option>
+<option selected="" value="hi">हिन्दी (HI)</option>
+<option value="bn">বাংলা (BN)</option>
+<option value="ta">தமிழ் (TA)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-1.5 top-2 text-[16px] text-on-surface-variant">translate</span>
+</div>
+<!-- Notification Trigger -->
+<button class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-surface-container-low text-primary transition-colors duration-150 active:scale-95" title="Notifications">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<!-- CONTENT CANVAS (DYNAMIC VIEWS) -->
+<main class="flex-1 pt-20 pb-24 md:pb-12 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+<!-- ========================================================================= -->
+<!-- VIEW 1: LANDING & OVERVIEW HERO -->
+<!-- ========================================================================= -->
+<section class="space-y-12" id="view-landing">
+<!-- Hero Banner Card -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary-container to-[#031d38] text-on-primary p-6 md:p-12 card-shadow">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary-fixed/30 text-secondary-fixed text-label-md font-label-md">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>AI-Guided Bharat Enterprise Infrastructure • 2026 Initiative</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl sm:text-display-lg text-white font-extrabold tracking-tight">
+            Turn Your Business Idea Into a Smarter Business Plan.
+            <span class="block text-primary-fixed mt-1 font-headline-md text-headline-md font-semibold">अपने व्यापारिक विचार को बनाएं लाभदायी व सुरक्षित उद्यम।</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant/90 max-w-2xl leading-relaxed">
+            Overcoming capital blindspots, scheme confusion, and market risks with hyper-local cluster demand telemetry, verified PMEGP/Mudra integration, and regional multilingual voice advisories.
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<button class="px-6 py-3.5 bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md rounded-lg flex items-center gap-2 elevation-2 active:scale-95 transition-all" onclick="switchView('onboarding')">
+<span>Start Business Structuring / योजना बनाएं</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="px-5 py-3.5 bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 border border-white/20 text-white font-label-md text-label-md rounded-lg flex items-center gap-2 transition-all" onclick="switchView('dashboard')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Explore Live Bhopal Dal Mill Case Study</span>
+</button>
+</div>
+</div>
+<!-- Real-world Impact Badges -->
+<div class="mt-10 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-secondary-fixed font-bold">₹14.8 Cr+</div>
+<div class="font-body-sm text-body-sm text-surface-variant">Govt. Subsidies Mapped</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-surface-variant/70">सरकारी अनुदान सहायता</div>
+</div>
+<div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-white font-bold">18,400+</div>
+<div class="font-body-sm text-body-sm text-surface-variant">Rural Units Modeled</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-surface-variant/70">सत्यापित ग्रामीण उद्यम</div>
+</div>
+<div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-secondary-fixed font-bold">94.2%</div>
+<div class="font-body-sm text-body-sm text-surface-variant">Viability Score Precision</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-surface-variant/70">सटीक वित्तीय पूर्वानुमान</div>
+</div>
+<div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-white font-bold">100%</div>
+<div class="font-body-sm text-body-sm text-surface-variant">Vernacular Audio Ready</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-surface-variant/70">क्षेत्रीय बोलियों में उपलब्ध</div>
+</div>
+</div>
+</div>
+<!-- 6-Step Bharat Business Workflow Pipeline -->
+<div class="space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">How UdyamSetu Powers Grassroots Enterprise</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">From conversational voice input to bankable Detailed Project Report (DPR)</p>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold uppercase tracking-wider bg-secondary-container/30 px-3 py-1 rounded-md">6-Stage Framework</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow relative">
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">STEP 01</span>
+<div class="mt-3 flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary">record_voice_over</span>
+<span>Simple Input</span>
+</div>
+<p class="mt-2 text-body-sm font-body-sm text-on-surface-variant">Type or speak business intent in rural dialect or native tongue.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow relative">
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">STEP 02</span>
+<div class="mt-3 flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary">radar</span>
+<span>Demand Engine</span>
+</div>
+<p class="mt-2 text-body-sm font-body-sm text-on-surface-variant">APMC Mandi data and consumer kirana gap analysis in 15km cluster.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow relative">
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">STEP 03</span>
+<div class="mt-3 flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary">account_tree</span>
+<span>Cluster Mapping</span>
+</div>
+<p class="mt-2 text-body-sm font-body-sm text-on-surface-variant">Pinpoint competitor radius, raw material depots, and logistics friction.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow relative">
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">STEP 04</span>
+<div class="mt-3 flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<span>What-If Stress</span>
+</div>
+<p class="mt-2 text-body-sm font-body-sm text-on-surface-variant">Test price fluctuations, diesel hikes, and seasonal harvest drops.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow relative">
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">STEP 05</span>
+<div class="mt-3 flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary">description</span>
+<span>DPR &amp; Roadmap</span>
+</div>
+<p class="mt-2 text-body-sm font-body-sm text-on-surface-variant">Bank-ready Detailed Project Report formatted for PMEGP approval.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow relative">
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">STEP 06</span>
+<div class="mt-3 flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary">support_agent</span>
+<span>AI Saarthi</span>
+</div>
+<p class="mt-2 text-body-sm font-body-sm text-on-surface-variant">Continuous voice advisory to navigate licenses, subsidies, and GST.</p>
+</div>
+</div>
+</div>
+<!-- Bharat Micro-Enterprise Problem Landscape (7 Critical Blindspots Solved) -->
+<div class="bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30">
+<div class="mb-6">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">7 Challenges Rural Entrepreneurs Face (And How UdyamSetu Resolves Them)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bridging the critical structural divide between grassroots ambition and bankable viability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-error font-semibold">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-label-md text-label-md">1. Working Capital Blindspots</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Micro-entrepreneurs exhaust capital on heavy machinery with zero runway left for peak harvest grain stockpiling.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-error font-semibold">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span class="font-label-md text-label-md">2. Scheme Discovery Fatigue</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Complex 40-page central &amp; state scheme portals leave rural youths vulnerable to middlemen commission agents.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-error font-semibold">
+<span class="material-symbols-outlined text-[18px]">location_off</span>
+<span class="font-label-md text-label-md">3. Hyper-Local Demand Blindness</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Setting up flour/dal mills in clusters with existing surplus capacity leads to cutthroat margins and default within 18 months.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-error font-semibold">
+<span class="material-symbols-outlined text-[18px]">request_quote</span>
+<span class="font-label-md text-label-md">4. High-Interest Informal Debt</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Borrowing at 36-48% annual interest from local moneylenders when they qualify for 8.5% Mudra or 35% PMEGP subsidies.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-error font-semibold">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+<span class="font-label-md text-label-md">5. Vernacular Technical Barrier</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Financial jargon (DSCR, IRR, Break-even, Depreciation) in English prevents rural business owners from negotiating with banks.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-2 text-error font-semibold">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span class="font-label-md text-label-md">6. Lack of Packaging &amp; FSSAI Standards</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Selling loose pulses at ₹74/kg wholesale rather than branded 1kg packets at ₹118/kg to regional grocery stores.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md">7. The UdyamSetu Solution</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Automates financial structuring, DPR generation, and provides actionable daily milestone playbooks in Devanagari.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- VIEW 2: INTERACTIVE 5-STEP ONBOARDING WIDGET -->
+<!-- ========================================================================= -->
+<section class="hidden space-y-8" id="view-onboarding">
+<div class="max-w-4xl mx-auto">
+<!-- Progress Stepper Header -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow mb-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-outline-variant/20">
+<div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold uppercase">व्यापार सेटअप विज़ार्ड • Step By Step Guided Onboarding</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Configure Your Enterprise Idea</h2>
+</div>
+<!-- Voice Trigger for Instant Filling -->
+<button class="inline-flex items-center gap-2 px-3 py-2 bg-secondary-container/40 hover:bg-secondary-container text-on-secondary-container rounded-lg text-label-md font-label-md transition-all active:scale-95 border border-secondary/20" onclick="simulateVoiceFill()">
+<span class="material-symbols-outlined text-secondary">mic</span>
+<span>Auto-Fill With Voice / बोलकर भरें</span>
+</button>
+</div>
+<!-- Interactive Step Indicator -->
+<div class="grid grid-cols-5 gap-2 pt-4" id="stepperTabs">
+<div class="step-indicator flex flex-col gap-1 cursor-pointer" onclick="goToStep(1)">
+<div class="h-1.5 rounded-full bg-secondary transition-all" id="step-bar-1"></div>
+<span class="text-[11px] font-semibold text-secondary" id="step-lbl-1">1. Category</span>
+</div>
+<div class="step-indicator flex flex-col gap-1 cursor-pointer" onclick="goToStep(2)">
+<div class="h-1.5 rounded-full bg-outline-variant/40 transition-all" id="step-bar-2"></div>
+<span class="text-[11px] font-semibold text-on-surface-variant" id="step-lbl-2">2. Location</span>
+</div>
+<div class="step-indicator flex flex-col gap-1 cursor-pointer" onclick="goToStep(3)">
+<div class="h-1.5 rounded-full bg-outline-variant/40 transition-all" id="step-bar-3"></div>
+<span class="text-[11px] font-semibold text-on-surface-variant" id="step-lbl-3">3. Capital</span>
+</div>
+<div class="step-indicator flex flex-col gap-1 cursor-pointer" onclick="goToStep(4)">
+<div class="h-1.5 rounded-full bg-outline-variant/40 transition-all" id="step-bar-4"></div>
+<span class="text-[11px] font-semibold text-on-surface-variant" id="step-lbl-4">4. Skills</span>
+</div>
+<div class="step-indicator flex flex-col gap-1 cursor-pointer" onclick="goToStep(5)">
+<div class="h-1.5 rounded-full bg-outline-variant/40 transition-all" id="step-bar-5"></div>
+<span class="text-[11px] font-semibold text-on-surface-variant" id="step-lbl-5">5. Goal</span>
+</div>
+</div>
+</div>
+<!-- Voice Simulation Alert Toast -->
+<div class="hidden mb-6 p-4 rounded-xl bg-secondary-container/30 border border-secondary/30 flex items-start gap-3" id="voice-recognized-banner">
+<span class="material-symbols-outlined text-secondary text-[24px]">graphic_eq</span>
+<div>
+<div class="font-label-md text-label-md text-secondary font-bold">Voice Recognized (हिन्दी ध्वनि समझी गई):</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">"मुझे फंदा कलां, भोपाल में छोटी दाल मिल लगानी है। मेरे पास 3.5 लाख रुपये हैं और बैंक से मुद्रा या PMEGP लोन चाहिए।"</p>
+<span class="text-[11px] text-secondary font-semibold">✓ Parsed: Category=Agro Dal Mill, Location=Phanda Kalan MP, Equity=₹3.5L, Target=PMEGP.</span>
+</div>
+</div>
+<!-- Stepper Container -->
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/30 card-shadow">
+<!-- STEP 1: Business Category -->
+<div class="step-content space-y-6" id="step-content-1">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Select Business Domain / व्यापार क्षेत्र चुनें</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tailors scheme parameters and local APMC demand data specifically for your trade.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<label class="p-4 rounded-xl border-2 border-secondary bg-secondary-container/10 flex items-start gap-3 cursor-pointer">
+<input checked="" class="mt-1 text-primary focus:ring-primary" name="bizCategory" type="radio" value="dal_mill"/>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold">Food Processing / Dal Mill</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">दाल व अनाज प्रसंस्करण इकाई</div>
+<p class="text-body-sm text-on-surface-variant mt-1">High demand in MP/Bhopal agro-belt. High PMEGP 35% subsidy fit.</p>
+</div>
+</label>
+<label class="p-4 rounded-xl border border-outline-variant/40 hover:bg-surface-container-low flex items-start gap-3 cursor-pointer">
+<input class="mt-1 text-primary focus:ring-primary" name="bizCategory" type="radio" value="dairy"/>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold">Dairy Farming &amp; Chilling</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">दुग्ध उत्पादन व शीतलन केंद्र</div>
+<p class="text-body-sm text-on-surface-variant mt-1">NABARD Dairy Entrepreneurship Scheme linked.</p>
+</div>
+</label>
+<label class="p-4 rounded-xl border border-outline-variant/40 hover:bg-surface-container-low flex items-start gap-3 cursor-pointer">
+<input class="mt-1 text-primary focus:ring-primary" name="bizCategory" type="radio" value="retail"/>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold">Rural Distribution Retail</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">ग्रामीण किराना व थोक वितरण</div>
+<p class="text-body-sm text-on-surface-variant mt-1">Working capital support via Mudra Shishu/Kishore.</p>
+</div>
+</label>
+<label class="p-4 rounded-xl border border-outline-variant/40 hover:bg-surface-container-low flex items-start gap-3 cursor-pointer">
+<input class="mt-1 text-primary focus:ring-primary" name="bizCategory" type="radio" value="handloom"/>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold">Agro-Tools &amp; Fabrication</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">कृषि उपकरण एवं वेल्डिंग वर्कशॉप</div>
+<p class="text-body-sm text-on-surface-variant mt-1">Eligible under Stand-Up India and PM Vishwakarma.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- STEP 2: Location -->
+<div class="step-content hidden space-y-6" id="step-content-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Enterprise Location / कार्यस्थल का चयन</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Used to cross-reference rural population indices, mandi arrival volumes, and transport links.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">State / राज्य</label>
+<select class="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md focus:border-primary">
+<option selected="">Madhya Pradesh (मध्य प्रदेश)</option>
+<option>Uttar Pradesh (उत्तर प्रदेश)</option>
+<option>Rajasthan (राजस्थान)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">District / जिला</label>
+<select class="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md focus:border-primary">
+<option selected="">Bhopal (भोपाल)</option>
+<option>Sehore (सीहोर)</option>
+<option>Raisen (रायसेन)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Gram Panchayat / Cluster</label>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md focus:border-primary" type="text" value="Phanda Kalan (फंदा कलां)"/>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[28px]">pin_drop</span>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Location Telemetry Verified</div>
+<div class="text-body-sm text-on-surface-variant">Classified as Rural Area: Qualifies for maximum 35% PMEGP subsidy tier.</div>
+</div>
+</div>
+<span class="text-secondary font-bold text-label-sm bg-secondary-container/40 px-2.5 py-1 rounded-full">Zone A Rural</span>
+</div>
+</div>
+<!-- STEP 3: Capital & Investment -->
+<div class="step-content hidden space-y-6" id="step-content-3">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Investment Sizing / पूंजी एवं ऋण आवश्यकता</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Determine your promoter contribution vs required institutional bank debt.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30">
+<label class="block font-label-md text-label-md text-primary mb-1">Own Capital Available (स्वयं की पूंजी)</label>
+<div class="relative mt-2">
+<span class="absolute left-3 top-2.5 text-on-surface-variant font-semibold">₹</span>
+<input class="w-full bg-white pl-8 pr-4 py-2 rounded-lg border border-outline-variant/40 font-numeric-data text-numeric-data font-bold text-primary" type="text" value="3,50,000"/>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant mt-1 block">Promoter's equity margin (~35% of project cost)</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30">
+<label class="block font-label-md text-label-md text-primary mb-1">Total Estimated Project Outlay</label>
+<div class="relative mt-2">
+<span class="absolute left-3 top-2.5 text-on-surface-variant font-semibold">₹</span>
+<input class="w-full bg-white pl-8 pr-4 py-2 rounded-lg border border-outline-variant/40 font-numeric-data text-numeric-data font-bold text-primary" type="text" value="10,00,000"/>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant mt-1 block">Includes machinery, shed electrification, working capital</span>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-secondary/30 bg-secondary-container/20 flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">Recommended Loan Route</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Bank Term Loan Needed: ₹6,50,000</div>
+</div>
+<span class="px-3 py-1 bg-secondary text-on-secondary text-label-sm font-semibold rounded-lg">PMEGP Ideal</span>
+</div>
+</div>
+<!-- STEP 4: Skills & Profile -->
+<div class="step-content hidden space-y-6" id="step-content-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Founder Background / योग्यता एवं अनुभव</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Helps score bank credit appraisal and training certifications (EDP).</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Education Qualification</label>
+<select class="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md">
+<option selected="">10th Standard Passed (10वीं उत्तीर्ण)</option>
+<option>12th Standard Passed</option>
+<option>Graduate / ITI Diploma</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Prior Experience</label>
+<select class="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md">
+<option selected="">3+ Years in Agro Trading / Mandi</option>
+<option>1 Year Workshop Experience</option>
+<option>First Time Business Owner</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Social Category</label>
+<select class="w-full bg-surface border border-outline-variant/60 rounded-lg p-2.5 text-body-md">
+<option selected="">OBC / Rural Special Category (35% Subsidy)</option>
+<option>General Category (25% Subsidy)</option>
+<option>SC / ST / Women Owned (35% Subsidy)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- STEP 5: Goals & Execution Intent -->
+<div class="step-content hidden space-y-6" id="step-content-5">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Finalize Strategic Objective / अंतिम लक्ष्य</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select target outcomes to tailor the 90-day actionable roadmap.</p>
+</div>
+<div class="space-y-3">
+<label class="flex items-center gap-3 p-3.5 rounded-xl border border-secondary/40 bg-secondary-container/10 cursor-pointer">
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Apply for 35% PMEGP Capital Subsidy via KVIC</span>
+<p class="text-body-sm text-on-surface-variant">Generate pre-filled project report compliant with Lead Bank norms.</p>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-xl border border-outline-variant/30 hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Procure Semi-Automated 2HP Mini Dal Mill Plant</span>
+<p class="text-body-sm text-on-surface-variant">Connect with certified machinery vendors in Indore &amp; Dewas clusters.</p>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-xl border border-outline-variant/30 hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary" type="checkbox"/>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold">Direct Supply Onboarding with 40+ Local Kirana Stores</span>
+<p class="text-body-sm text-on-surface-variant">Eliminate secondary middlemen to retain ₹22/kg additional value margin.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Stepper Action Footers -->
+<div class="flex items-center justify-between pt-6 mt-6 border-t border-outline-variant/20">
+<button class="px-4 py-2.5 rounded-lg border border-outline-variant/50 text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low disabled:opacity-40" disabled="" id="stepPrevBtn" onclick="changeStep(-1)">
+              Previous / पीछे
+            </button>
+<button class="px-6 py-2.5 rounded-lg bg-primary hover:bg-primary/90 text-on-primary font-label-md text-label-md flex items-center gap-2 elevation-2 active:scale-95" id="stepNextBtn" onclick="changeStep(1)">
+<span>Next Step / आगे बढ़ें</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- VIEW 3: MAIN AI ADVISORY DASHBOARD -->
+<!-- ========================================================================= -->
+<section class="hidden space-y-8" id="view-dashboard">
+<!-- Entrepreneur Context Header -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md font-bold text-primary">Good morning, Rameshwar Patel 👋</span>
+<span class="px-2.5 py-0.5 rounded-full text-bilingual-indicator font-bilingual-indicator bg-secondary-container/40 text-secondary border border-secondary/20">
+              Verified Business Model
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+<span>Enterprise: <strong>Shree Ganesh Agro Dal Processing</strong> • Phanda Kalan, Bhopal Cluster (M.P.)</span>
+</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-low border border-outline-variant/40 text-primary font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container-high transition-colors" onclick="toggleExplainDrawer()">
+<span class="material-symbols-outlined text-secondary text-[18px]">info</span>
+<span>Why Am I Seeing This? (XAI)</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 elevation-2 hover:bg-secondary/90" onclick="switchView('simulator')">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Run Simulator</span>
+</button>
+</div>
+</div>
+<!-- AI Feasibility Score & Core KPIs Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Primary AI Feasibility Score Gauge (5 Columns) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">AI FEASIBILITY INDEX (व्यवहार्यता सूचकांक)</span>
+<span class="px-2.5 py-0.5 rounded-full text-bilingual-indicator font-bilingual-indicator bg-secondary-container text-on-secondary-container font-bold">Strong Viability</span>
+</div>
+<!-- Big Gauge Visual -->
+<div class="mt-6 flex items-center gap-6">
+<div class="relative w-32 h-32 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background circle -->
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Progress circle (82%) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.8"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary leading-none">82</span>
+<span class="text-[11px] font-semibold text-on-surface-variant">/ 100</span>
+</div>
+</div>
+<div class="space-y-2 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Local Demand: <strong class="text-primary">Very High (88%)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Competition Density: <strong class="text-primary">Low (1.4 km radius clear)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="text-on-surface">Capital Payback: <strong class="text-primary">6.8 Months</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Subsidy Readiness: <strong class="text-secondary">PMEGP 35%</strong></span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 bg-surface-container-low/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-primary">AI Recommendation:</strong> Proceed with 20 Quintal/day processing line. Phanda Kalan grain depot eliminates ₹4.20/kg logistics freight.
+            </p>
+</div>
+</div>
+<!-- 4 Financial & Operational Metric Cards (7 Columns) -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-primary flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Project Outlay</span>
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+</div>
+<div class="my-3">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary">₹8,50,000</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">कुल परियोजना लागत</div>
+</div>
+<div class="text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>Machinery: ₹4.8L • Working Capital: ₹3.7L</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-secondary flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Monthly Net Profit (Est.)</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">trending_up</span>
+</div>
+<div class="my-3">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-secondary">₹68,400</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">अनुमानित मासिक शुद्ध लाभ</div>
+</div>
+<div class="text-body-sm text-on-surface-variant">
+<span>Net Margin: <strong>16.2%</strong> on sales</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-primary flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Break-Even Period</span>
+<span class="material-symbols-outlined text-primary text-[20px]">hourglass_bottom</span>
+</div>
+<div class="my-3">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary">6.8 Months</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">लागत वसूली समय सीमा</div>
+</div>
+<div class="text-body-sm text-on-surface-variant">
+<span>180 Quintals processed to break-even</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow border-t-4 border-t-secondary flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">PMEGP Subsidy Benefit</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">stars</span>
+</div>
+<div class="my-3">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-secondary">₹2,97,500</div>
+<div class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">35% ग्रामीण अनुदान सहायता</div>
+</div>
+<div class="text-body-sm text-on-surface-variant">
+<span>Non-refundable Govt. grant locked in escrow</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Explainable AI (XAI) Expandable Drawer -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-secondary/30 card-shadow space-y-4" id="xai-drawer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Why Am I Seeing This Score? (पारदर्शी एआई विश्लेषण)</h3>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator bg-secondary-container text-on-secondary-container px-2.5 py-0.5 rounded-full font-bold">Confidence: 94.2%</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-body-sm">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="font-semibold text-primary mb-1">1. Local Sourcing Advantage</div>
+<p class="text-on-surface-variant">Bhopal-Sehore APMC Mandi produces 18,000 MT of Chana &amp; Arhar annually. Buying raw pulse directly saves ₹4.20/kg compared to Indore wholesale middlemen.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="font-semibold text-primary mb-1">2. 14 Weekly Haat-Bazaars</div>
+<p class="text-on-surface-variant">Within an 11 km radius, 14 village weekly markets lack branded 1kg/2kg packaging. They currently procure loose grain with higher dust wastage (6.4%).</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30">
+<div class="font-semibold text-primary mb-1">3. Low Power Overhead</div>
+<p class="text-on-surface-variant">Phanda Kalan feeder qualifies for MP agricultural subsidised tariff slab (₹4.80/kWh), reducing energy overhead by 22% compared to urban mills.</p>
+</div>
+</div>
+</div>
+<!-- Hyper-Local Cluster Map & Geospatial Telemetry -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Hyper-Local Market Telemetry (15 KM Radius)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sehore - Bhopal Highway Cluster Pulse Telemetry</p>
+</div>
+<div class="flex items-center gap-3 text-bilingual-indicator font-bilingual-indicator">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Your Unit</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-error"></span> Competitor</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span> APMC Mandi</span>
+</div>
+</div>
+<!-- Simulated Interactive Map Component with Pinpoints -->
+<div class="relative w-full h-80 bg-slate-100 rounded-xl overflow-hidden border border-outline-variant/40">
+<!-- Stylized Map Grid Canvas -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-70"></div>
+<!-- Highway 12 Vector Representation -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<path d="M 50 240 Q 300 180 700 120 T 1200 40" fill="none" stroke="#CBD5E1" stroke-linecap="round" stroke-width="12"></path>
+<path d="M 50 240 Q 300 180 700 120 T 1200 40" fill="none" stroke="#94A3B8" stroke-dasharray="6,6" stroke-width="2"></path>
+<text fill="#64748B" font-family="Inter" font-size="11" font-weight="600" x="320" y="160">SH-18 State Highway Corridor</text>
+</svg>
+<!-- Marker 1: Proposed Unit (Shree Ganesh Dal Mill) -->
+<div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center elevation-2 ring-4 ring-secondary/20 animate-pulse">
+<span class="material-symbols-outlined text-[20px]">store</span>
+</div>
+<div class="absolute top-11 -left-16 bg-white px-2.5 py-1 rounded-md shadow-md border border-outline-variant/30 text-center whitespace-nowrap z-20 pointer-events-none">
+<div class="font-bold text-primary text-[12px]">Proposed Unit (Phanda)</div>
+<div class="text-[10px] text-secondary">Zero Comp in 3.5km</div>
+</div>
+</div>
+<!-- Marker 2: Competitor Unit -->
+<div class="absolute top-1/4 right-1/4 group cursor-pointer">
+<div class="w-8 h-8 rounded-full bg-error text-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">factory</span>
+</div>
+<div class="absolute top-9 -left-14 bg-white px-2 py-0.5 rounded shadow text-center whitespace-nowrap text-[11px] text-on-surface z-10">
+              Patidar Dal Mill (3.8km away)
+            </div>
+</div>
+<!-- Marker 3: APMC Mandi Sourcing Hub -->
+<div class="absolute bottom-6 left-12 group cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-primary-container text-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[18px]">agriculture</span>
+</div>
+<div class="absolute -top-8 left-0 bg-white px-2 py-0.5 rounded shadow text-[11px] font-semibold text-primary whitespace-nowrap">
+              Sehore Mandi Depot (Procurement ₹74/kg)
+            </div>
+</div>
+<!-- Marker 4: Kirana Wholesale Cluster -->
+<div class="absolute top-12 left-1/2 group cursor-pointer">
+<div class="w-7 h-7 rounded-full bg-on-tertiary-container text-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[14px]">local_convenience_store</span>
+</div>
+<div class="absolute top-8 -left-10 bg-white px-2 py-0.5 rounded shadow text-[10px] text-on-surface whitespace-nowrap">
+              42 Kirana Retail Hub (Bairagarh Belt)
+            </div>
+</div>
+<!-- Map Metric HUD Floating Overlay -->
+<div class="absolute bottom-3 right-3 glassmorphic p-3 rounded-xl border border-white/60 shadow-lg text-body-sm space-y-1">
+<div class="flex items-center justify-between gap-4">
+<span class="text-on-surface-variant font-medium">Unmet Monthly Demand:</span>
+<strong class="text-primary font-numeric-data">14.5 Metric Tonnes</strong>
+</div>
+<div class="flex items-center justify-between gap-4">
+<span class="text-on-surface-variant font-medium">Wholesale Sourcing Price:</span>
+<strong class="text-secondary font-numeric-data">₹74.00 / kg</strong>
+</div>
+<div class="flex items-center justify-between gap-4">
+<span class="text-on-surface-variant font-medium">Retail Realization:</span>
+<strong class="text-primary font-numeric-data">₹118.00 / kg</strong>
+</div>
+</div>
+</div>
+</div>
+<!-- Risk Radar & Concrete Mitigation Recommendations -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Business Risk Matrix &amp; Hedging Strategies</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5-Vector Risk Profiling for Rural Food Processing</p>
+</div>
+<span class="text-bilingual-indicator font-bilingual-indicator bg-secondary-container/40 text-secondary font-bold px-3 py-1 rounded-full">Overall Risk: MODERATE-LOW</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+<div class="p-3.5 rounded-xl border border-outline-variant/30 bg-surface">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Demand Risk</span>
+<span class="text-[11px] font-bold text-secondary bg-secondary-container/50 px-2 py-0.5 rounded">LOW</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Pulses are an essential staple; demand is non-cyclical with steady 7% local consumption growth.</p>
+</div>
+<div class="p-3.5 rounded-xl border border-outline-variant/30 bg-surface">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Competition</span>
+<span class="text-[11px] font-bold text-secondary bg-secondary-container/50 px-2 py-0.5 rounded">MEDIUM</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Nearest mill is 3.8 km away. Differentiate via clean 1kg packaging and free delivery to local kiranas.</p>
+</div>
+<div class="p-3.5 rounded-xl border border-error/30 bg-error-container/20">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-error font-semibold">Raw Grain Price</span>
+<span class="text-[11px] font-bold text-error bg-error-container px-2 py-0.5 rounded">HIGH</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Chana prices fluctuate 20% post-monsoon. <em>Action:</em> Enter forward contracts with 3 local FPOs at harvest.</p>
+</div>
+<div class="p-3.5 rounded-xl border border-outline-variant/30 bg-surface">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Liquidity Risk</span>
+<span class="text-[11px] font-bold text-on-tertiary-container bg-tertiary-fixed/50 px-2 py-0.5 rounded">MEDIUM</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Retailers demand 15-day credit. Maintain ₹2.5L cash credit facility sanctioned under Mudra Kishore.</p>
+</div>
+<div class="p-3.5 rounded-xl border border-outline-variant/30 bg-surface">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Compliance / FSSAI</span>
+<span class="text-[11px] font-bold text-secondary bg-secondary-container/50 px-2 py-0.5 rounded">LOW</span>
+</div>
+<p class="mt-2 text-body-sm text-on-surface-variant">Simple State Registration (Form A) sufficient for &lt; ₹12L turnover. Udyam registration completed in 1 day.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- VIEW 4: FINANCIAL ENGINE & INTERACTIVE WHAT-IF SIMULATOR -->
+<!-- ========================================================================= -->
+<section class="hidden space-y-8" id="view-simulator">
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-outline-variant/20">
+<div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold uppercase">Fintech Stress-Testing Engine • गणितीय पूर्वानुमान</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Interactive What-If Financial Simulator</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Move the sliders below to stress-test your business against grain inflation, price cuts, and high bank interest rates.</p>
+</div>
+<button class="px-3 py-1.5 border border-outline-variant/50 rounded-lg text-label-md text-on-surface-variant hover:text-primary flex items-center gap-1" onclick="resetSimulation()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset to Baseline / पुनः सेट करें</span>
+</button>
+</div>
+<!-- Simulator Interactive Grid -->
+<div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: 4 Interactive Sliders (5 Columns) -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Slider 1: Sales Volume -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-primary font-semibold">Monthly Sales Volume:</span>
+<span class="text-secondary font-numeric-data font-bold" id="lblSalesVol">100 Quintals (Baseline)</span>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-secondary" id="sliderSalesVol" max="150" min="60" oninput="recalcSimulator()" step="5" type="range" value="100"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+<span>-40% (Slow Season)</span>
+<span>Normal</span>
+<span>+50% (Festive Peak)</span>
+</div>
+</div>
+<!-- Slider 2: Raw Material Purchase Cost -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-primary font-semibold">Raw Pulse Purchase Price:</span>
+<span class="text-error font-numeric-data font-bold" id="lblRawCost">₹74.00 / kg</span>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-error" id="sliderRawCost" max="90" min="65" oninput="recalcSimulator()" step="1" type="range" value="74"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+<span>₹65 (Harvest Glut)</span>
+<span>₹74 Baseline</span>
+<span>₹90 (Crop Failure)</span>
+</div>
+</div>
+<!-- Slider 3: Finished Packaged Sale Price -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-primary font-semibold">Selling Price (To Kirana Retail):</span>
+<span class="text-secondary font-numeric-data font-bold" id="lblSalePrice">₹118.00 / kg</span>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-secondary" id="sliderSalePrice" max="135" min="100" oninput="recalcSimulator()" step="1" type="range" value="118"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+<span>₹100 (Price War)</span>
+<span>₹118 Baseline</span>
+<span>₹135 (Premium Organic)</span>
+</div>
+</div>
+<!-- Slider 4: Bank Loan Interest Rate -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-primary font-semibold">Loan Interest Rate (%):</span>
+<span class="text-primary font-numeric-data font-bold" id="lblInterest">8.5% (PMEGP / Mudra)</span>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary" id="sliderInterest" max="16" min="7" oninput="recalcSimulator()" step="0.5" type="range" value="8.5"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-mono">
+<span>7.5% Subsidized</span>
+<span>8.5% Mudra</span>
+<span>15.0% Private NBFC</span>
+</div>
+</div>
+<!-- Stress Alert Callout -->
+<div class="p-3.5 rounded-xl border border-secondary/30 bg-secondary-container/20 text-body-sm flex items-start gap-2.5" id="simAlertBox">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<div>
+<strong class="text-secondary">Viable &amp; Safe Margin:</strong>
+<p class="text-on-surface-variant text-[12px] mt-0.5">Under current assumptions, your debt service coverage ratio (DSCR) is 2.4x. Bank approval probability is high.</p>
+</div>
+</div>
+</div>
+<!-- Right: Real-Time Dynamic Comparison & Chart (7 Columns) -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Comparison Scorecard: Base vs Simulated -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30">
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant uppercase font-semibold">Baseline Plan (सामान्य स्थिति)</span>
+<div class="mt-2 font-display-lg-mobile text-display-lg-mobile font-bold text-primary">₹68,400</div>
+<div class="text-[12px] text-on-surface-variant">Net Profit / Month</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/20 flex justify-between text-[12px]">
+<span>Annual Net:</span>
+<strong>₹8,20,800</strong>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border-2 border-secondary card-shadow">
+<div class="flex items-center justify-between">
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary uppercase font-bold">Simulated Outcome (अनुकरण)</span>
+<span class="text-[10px] font-bold px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded" id="simTag">LIVE</span>
+</div>
+<div class="mt-2 font-display-lg-mobile text-display-lg-mobile font-bold text-secondary" id="dynNetProfit">₹68,400</div>
+<div class="text-[12px] text-on-surface-variant" id="dynMargin">Net Margin: 16.2%</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/20 flex justify-between text-[12px]">
+<span>Simulated Annual:</span>
+<strong class="text-primary font-numeric-data" id="dynAnnualProfit">₹8,20,800</strong>
+</div>
+</div>
+</div>
+<!-- Expense Breakdown Visual (CSS Bar Distribution) -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-primary font-semibold">Monthly Expense Distribution (%)</span>
+<span class="text-[12px] text-on-surface-variant">Operating Cost Structure</span>
+</div>
+<!-- Multi-segment progress bar -->
+<div class="w-full h-5 rounded-lg overflow-hidden flex bg-surface-container-high">
+<div class="bg-primary hover:opacity-90 transition-all" id="barRaw" style="width: 58%;" title="Raw Pulse Procurement: 58%"></div>
+<div class="bg-secondary hover:opacity-90 transition-all" style="width: 14%;" title="Labor &amp; Milling Operations: 14%"></div>
+<div class="bg-on-tertiary-container hover:opacity-90 transition-all" style="width: 12%;" title="Feeder Power &amp; Electrification: 12%"></div>
+<div class="bg-secondary-fixed-dim hover:opacity-90 transition-all" style="width: 8%;" title="Packaging &amp; Corrugated Boxes: 8%"></div>
+<div class="bg-outline hover:opacity-90 transition-all" style="width: 8%;" title="Bank Loan EMI: 8%"></div>
+</div>
+<!-- Legend -->
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-3 text-[11px] text-on-surface-variant font-medium">
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-primary"></span> Raw Material (58%)</div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-secondary"></span> Labor (14%)</div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-on-tertiary-container"></span> Power (12%)</div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-secondary-fixed-dim"></span> Packaging (8%)</div>
+<div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-outline"></span> Bank EMI (8%)</div>
+</div>
+</div>
+<!-- 12-Month Projected Cash Flow Sparkline (SVG Chart) -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 card-shadow">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-primary font-semibold">12-Month Projected Cash Surplus (₹ Lakhs)</span>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-bold">Post-Debt Free Cash Flow</span>
+</div>
+<div class="h-28 w-full flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 90">
+<defs>
+<lineargradient id="chartGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006c4a" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#006c4a" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Gradient Area -->
+<polygon fill="url(#chartGrad)" points="0,85 30,78 70,72 110,65 150,55 190,52 230,44 270,38 310,32 350,26 390,15 390,90 0,90"></polygon>
+<!-- Polyline trend -->
+<polyline fill="none" points="0,85 30,78 70,72 110,65 150,55 190,52 230,44 270,38 310,32 350,26 390,15" stroke="#006c4a" stroke-linecap="round" stroke-width="3"></polyline>
+<!-- Data points -->
+<circle cx="150" cy="55" fill="#006c4a" r="3.5" stroke="#fff" stroke-width="1.5"></circle>
+<circle cx="390" cy="15" fill="#006c4a" r="4.5" stroke="#fff" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex justify-between text-[11px] text-on-surface-variant pt-2 border-t border-outline-variant/20 font-mono">
+<span>Month 1 (Setup)</span>
+<span>Month 4 (Break-Even)</span>
+<span>Month 8 (Expansion)</span>
+<span class="text-secondary font-bold">Month 12 (₹9.2L Cumul.)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- VIEW 5: GOVERNMENT SCHEMES MATCHING ENGINE -->
+<!-- ========================================================================= -->
+<section class="hidden space-y-8" id="view-schemes">
+<!-- Scheme Filter Header -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold uppercase">सत्यापित सरकारी योजनाएं • Verified Indian MSME Funding</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Government Scheme Matching Engine</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant matching against Central (KVIC, MoFPI, SIDBI) and Madhya Pradesh State Subsidies.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-md text-label-md text-on-surface-variant font-medium">Filter:</span>
+<span class="px-3 py-1 rounded-full bg-primary text-white text-label-sm font-semibold">All Matches (4)</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-label-sm hover:bg-surface-container-high cursor-pointer">Subsidy &gt; 30%</span>
+</div>
+</div>
+<!-- Scheme Cards Bento List -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- SCHEME 1: PMEGP (Prime Match) -->
+<div class="bg-surface-container-lowest rounded-2xl border-2 border-secondary card-shadow p-6 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary text-white text-[11px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+            96% Match • Best Fit
+          </div>
+<div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">PMEGP Scheme</h3>
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">KVIC / MoMSME Initiative</span>
+</div>
+</div>
+<div class="mt-4 p-3 bg-secondary-container/20 rounded-xl border border-secondary/20">
+<div class="text-headline-md font-headline-md font-bold text-secondary">35% Capital Subsidy</div>
+<div class="text-body-sm text-on-surface">Rural OBC / Special Category Benefit: <strong>₹2,97,500 grant</strong> on ₹8.5L project.</div>
+</div>
+<div class="mt-4 space-y-2 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Promoter Contribution: <strong>Only 5% (₹42,500)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Mandatory: 10-day EDP training online/offline</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Bank Term Loan: Balance ₹5,10,000</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2">
+<button class="w-full py-2.5 bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md rounded-lg elevation-2 flex items-center justify-center gap-2 active:scale-95" onclick="triggerSchemeApplication('PMEGP')">
+<span>Generate Pre-Filled PMEGP DPR</span>
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<span class="text-[11px] text-center block text-on-surface-variant">Direct link to kviconline.gov.in portal format</span>
+</div>
+</div>
+<!-- SCHEME 2: PM Mudra Yojana -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 card-shadow p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">PM Mudra (Kishore)</h3>
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">No Collateral Required</span>
+</div>
+</div>
+<div class="mt-4 p-3 bg-surface-container-low rounded-xl border border-outline-variant/30">
+<div class="text-headline-md font-headline-md font-bold text-primary">Up to ₹5,00,000 Loan</div>
+<div class="text-body-sm text-on-surface-variant">Concessional Interest: <strong>8.4% - 9.2% p.a.</strong></div>
+</div>
+<div class="mt-4 space-y-2 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Zero processing fee in nationalised banks</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Mudra Debit Card for working capital grain buying</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Repayment period: Up to 5 years (60 months)</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2">
+<button class="w-full py-2.5 bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2" onclick="triggerSchemeApplication('Mudra')">
+<span>View Bank Checklist / दस्तावेज</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<span class="text-[11px] text-center block text-on-surface-variant">Lead Bank: Central Bank of India (Phanda Branch)</span>
+</div>
+</div>
+<!-- SCHEME 3: PMFME (Food Processing Grant) -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 card-shadow p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[28px]">nutrition</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">PMFME ODOP Scheme</h3>
+<span class="text-bilingual-indicator font-bilingual-indicator text-on-surface-variant">Ministry of Food Processing</span>
+</div>
+</div>
+<div class="mt-4 p-3 bg-surface-container-low rounded-xl border border-outline-variant/30">
+<div class="text-headline-md font-headline-md font-bold text-on-tertiary-container">35% Credit Subsidy</div>
+<div class="text-body-sm text-on-surface-variant">Grant ceiling up to <strong>₹10,00,000</strong> per micro enterprise.</div>
+</div>
+<div class="mt-4 space-y-2 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Includes seed capital for Self-Help Group (SHG) members</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>50% marketing &amp; branding subsidy support</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Aligned with One District One Product (ODOP)</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 space-y-2">
+<button class="w-full py-2.5 bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2" onclick="triggerSchemeApplication('PMFME')">
+<span>Check ODOP Alignment</span>
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+<span class="text-[11px] text-center block text-on-surface-variant">Bhopal &amp; Sehore listed under Pulse Processing</span>
+</div>
+</div>
+</div>
+<!-- Application Document Checklist Drawer Banner -->
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-outline-variant/30">
+<span class="material-symbols-outlined text-[26px]">folder_special</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">1-Click MSME Scheme Bundle Generator</div>
+<div class="text-body-sm text-on-surface-variant">Includes Udyam Registration Draft, Land Lease Affidavit format, and 3-Year Cash Flow Projection.</div>
+</div>
+</div>
+<button class="px-5 py-3 bg-primary hover:bg-primary/90 text-white font-label-md text-label-md rounded-lg flex items-center gap-2 whitespace-nowrap elevation-2" onclick="triggerDPRDownload()">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+<span>Download Complete Dossier (ZIP)</span>
+</button>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- VIEW 6: 90-DAY ACTIONABLE BLUEPRINT ROADMAP -->
+<!-- ========================================================================= -->
+<section class="hidden space-y-8" id="view-blueprint">
+<!-- Blueprint Header -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold uppercase">90-Day Execution Playbook • 90 दिन की कार्ययोजना</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">From Setup to First Commercial Invoice</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Time-boxed operational milestones ensuring your unit reaches positive cash flow without delays.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-md text-label-md flex items-center gap-1.5" onclick="triggerAudioBrief()">
+<span class="material-symbols-outlined text-secondary text-[18px]">volume_up</span>
+<span>Listen Audio Brief (Hindi)</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-white font-label-md text-label-md flex items-center gap-1.5 elevation-2" onclick="triggerDPRDownload()">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Export Executive PDF</span>
+</button>
+</div>
+</div>
+<!-- 4 Timeline Phases Accordion / Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Phase 1: Days 1-15 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl border-t-4 border-t-secondary border-x border-b border-outline-variant/30 card-shadow space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">PHASE 1</span>
+<span class="text-[11px] font-semibold text-on-surface-variant">Days 1 - 15</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Statutory &amp; Identity</h3>
+<div class="space-y-3 text-body-sm">
+<label class="flex items-start gap-2.5">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface">Udyam Registration on MSME portal using Aadhaar &amp; PAN.</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface">Execute 5-year shed lease agreement in Phanda Kalan.</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface">Open Current Bank Account with Central Bank of India.</span>
+</label>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">
+            Status: 66% Completed
+          </div>
+</div>
+<!-- Phase 2: Days 16-30 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl border-t-4 border-t-primary border-x border-b border-outline-variant/30 card-shadow space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-primary bg-surface-container-high px-2 py-0.5 rounded">PHASE 2</span>
+<span class="text-[11px] font-semibold text-on-surface-variant">Days 16 - 30</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Bank DPR &amp; Subsidy</h3>
+<div class="space-y-3 text-body-sm">
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface">Submit UdyamSetu Bank DPR to District Industries Centre (DIC Bhopal).</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface">Attend 10-Day RSETI/EDP Entrepreneurship Training.</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface">Receive PMEGP Taskforce Committee Loan Sanction Letter.</span>
+</label>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 text-bilingual-indicator font-bilingual-indicator text-on-surface-variant font-semibold">
+            Pending Bank Committee Meeting
+          </div>
+</div>
+<!-- Phase 3: Days 31-60 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl border-t-4 border-t-primary border-x border-b border-outline-variant/30 card-shadow space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-primary bg-surface-container-high px-2 py-0.5 rounded">PHASE 3</span>
+<span class="text-[11px] font-semibold text-on-surface-variant">Days 31 - 60</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Machinery &amp; Power</h3>
+<div class="space-y-3 text-body-sm">
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface">Sanction 3-Phase 10HP Commercial Ag Feeder Power.</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface">Procure Mini Dal Mill + Emery Roller Machine (Indore cluster).</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface">Installation, earth pit wiring, and dry test runs.</span>
+</label>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 text-bilingual-indicator font-bilingual-indicator text-on-surface-variant font-semibold">
+            Vendor Quotations Shortlisted
+          </div>
+</div>
+<!-- Phase 4: Days 61-90 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl border-t-4 border-t-secondary border-x border-b border-outline-variant/30 card-shadow space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">PHASE 4</span>
+<span class="text-[11px] font-semibold text-on-surface-variant">Days 61 - 90</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">FSSAI &amp; Distribution</h3>
+<div class="space-y-3 text-body-sm">
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface">FSSAI Basic Registration &amp; printed batch labeling.</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface">Onboard 40+ Kirana Stores with 15-day sample billing.</span>
+</label>
+<label class="flex items-start gap-2.5">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span class="text-on-surface">Lock PMEGP Subsidy in Bank Escrow / TDR Account.</span>
+</label>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold">
+            Target: ₹68,400 Profit by Day 90
+          </div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<span class="text-body-sm text-on-surface">Directly share this structured roadmap with your Lead Bank Manager via WhatsApp or Email.</span>
+</div>
+<button class="px-4 py-2 bg-secondary text-white rounded-lg text-label-md font-semibold flex items-center gap-1.5 active:scale-95" onclick="sharePlan()">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Share with Bank Manager</span>
+</button>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- VIEW 7: ADMIN & STATE IMPACT ANALYTICS (SIH 2026 BENCHMARK) -->
+<!-- ========================================================================= -->
+<section class="hidden space-y-8" id="view-admin">
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-bilingual-indicator font-bilingual-indicator text-secondary font-semibold uppercase">Smart India Hackathon • SIH 2026 Enterprise Telemetry</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">National Grassroots Enterprise Monitoring Engine</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time aggregate data across 18,400+ modeled rural micro-enterprises in Madhya Pradesh, UP &amp; Rajasthan.</p>
+</div>
+<span class="px-3 py-1 bg-secondary-container text-secondary font-bold text-label-sm rounded-full flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span> Live Portal Feed
+        </span>
+</div>
+<!-- Aggregate Impact Statistics -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow">
+<div class="text-label-md text-on-surface-variant">Total Micro-Plans Modeled</div>
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary mt-2">42,840</div>
+<div class="text-[12px] text-secondary font-semibold mt-1">↑ 28% from Q3 2025</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow">
+<div class="text-label-md text-on-surface-variant">Bank Loans Facilitated</div>
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-secondary mt-2">₹84.2 Cr</div>
+<div class="text-[12px] text-on-surface-variant mt-1">Across 14 Public Sector Banks</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow">
+<div class="text-label-md text-on-surface-variant">Average NPA Risk Mitigation</div>
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary mt-2">1.8%</div>
+<div class="text-[12px] text-secondary font-semibold mt-1">Vs 7.4% National Rural Avg</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 card-shadow">
+<div class="text-label-md text-on-surface-variant">Vernacular Voice Consults</div>
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary mt-2">1,24,900</div>
+<div class="text-[12px] text-on-surface-variant mt-1">72% Hindi • 18% Bhojpuri/Bundeli</div>
+</div>
+</div>
+<!-- Sector Breakdown & Cluster Distribution -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Top Rural Sectors Structured</h3>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="font-medium text-primary">Agro &amp; Pulse Processing Units</span>
+<span class="font-bold text-secondary">34% (14,565 Units)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary" style="width: 34%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="font-medium text-primary">Rural Retail &amp; FMCG Aggregation</span>
+<span class="font-bold text-primary">28% (11,995 Units)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary" style="width: 28%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="font-medium text-primary">Textiles, Handloom &amp; Tailoring Clusters</span>
+<span class="font-bold text-on-tertiary-container">22% (9,424 Units)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden">
+<div class="h-full bg-on-tertiary-container" style="width: 22%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm mb-1">
+<span class="font-medium text-primary">Dairy &amp; Cold Chain Micro-Hubs</span>
+<span class="font-bold text-outline">16% (6,854 Units)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden">
+<div class="h-full bg-outline" style="width: 16%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 card-shadow space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Lead Financing Banks Active in Network</h3>
+<div class="space-y-3 text-body-sm">
+<div class="p-3 rounded-xl bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<div>
+<div class="font-bold text-primary">State Bank of India (SBI)</div>
+<div class="text-[11px] text-on-surface-variant">Rural Mudra &amp; PMEGP Leader</div>
+</div>
+</div>
+<span class="font-numeric-data font-bold text-secondary">₹34.2 Cr Disbursed</span>
+</div>
+<div class="p-3 rounded-xl bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<div>
+<div class="font-bold text-primary">Central Bank of India (Lead Bank MP)</div>
+<div class="text-[11px] text-on-surface-variant">Bhopal &amp; Sehore Mandi Clusters</div>
+</div>
+</div>
+<span class="font-numeric-data font-bold text-secondary">₹26.8 Cr Disbursed</span>
+</div>
+<div class="p-3 rounded-xl bg-surface flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<div>
+<div class="font-bold text-primary">Madhya Pradesh Gramin Bank</div>
+<div class="text-[11px] text-on-surface-variant">Last-mile village branch network</div>
+</div>
+</div>
+<span class="font-numeric-data font-bold text-secondary">₹18.4 Cr Disbursed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- PERSISTENT MOBILE BOTTOM NAVIGATION (Source: Shared Component Anchor) -->
+<!-- ========================================================================= -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest border-t border-outline-variant/30 shadow-[0px_-2px_8px_rgba(10,37,64,0.04)] px-2 py-1.5 flex justify-around items-center">
+<button class="flex flex-col items-center justify-center text-primary px-2 py-1 font-semibold" id="bot-landing" onclick="switchView('landing')">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="text-[10px] font-medium">मुख्य</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-2 py-1" id="bot-onboarding" onclick="switchView('onboarding')">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="text-[10px] font-medium">सेटअप</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-2 py-1" id="bot-dashboard" onclick="switchView('dashboard')">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-[10px] font-medium">डैशबोर्ड</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-2 py-1" id="bot-simulator" onclick="switchView('simulator')">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+<span class="text-[10px] font-medium">सिमुलेटर</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-2 py-1" id="bot-schemes" onclick="switchView('schemes')">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="text-[10px] font-medium">योजनाएं</span>
+</button>
+</nav>
+<!-- ========================================================================= -->
+<!-- FLOATING AI MULTILINGUAL VOICE ASSISTANT ('Ask UdyamSetu / सारथी') -->
+<!-- ========================================================================= -->
+<aside class="fixed bottom-16 md:bottom-6 right-4 md:right-8 z-50">
+<div class="relative" id="voiceAssistantWidget">
+<!-- Expanded Voice Assistant Dialog Card -->
+<div class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-2xl border border-outline-variant/40 shadow-2xl p-5 space-y-4 elevation-3" id="voiceAssistantModal">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary animate-pulse"></span>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">Udyam Saarthi / सारथी</div>
+<span class="text-[10px] text-on-surface-variant">Multilingual Micro-Business AI Assistant</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary" onclick="toggleVoiceAssistant()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Chat History simulation -->
+<div class="space-y-3 text-body-sm max-h-60 overflow-y-auto custom-scroll pr-1">
+<div class="bg-surface-container-low p-3 rounded-xl rounded-tl-none border border-outline-variant/20">
+<span class="text-[11px] font-bold text-secondary block mb-1">AI Saarthi (सारथी):</span>
+<p class="text-on-surface">नमस्ते रामेश्वर जी! आप भोपाल-सीहोर दाल मिल परियोजना के बारे में क्या जानना चाहते हैं? मैं PMEGP सब्सिडी, मशीनरी व बिक्री पर सहायता कर सकता हूँ।</p>
+</div>
+<div class="hidden bg-secondary-container/30 p-3 rounded-xl rounded-tr-none border border-secondary/20 ml-6" id="assistantUserEcho">
+<span class="text-[11px] font-bold text-primary block mb-1">You (आप):</span>
+<p class="text-on-surface italic" id="assistantUserEchoText">"क्या मुझे दाल मिल के लिए 35% सब्सिडी मिलेगी?"</p>
+</div>
+<div class="hidden bg-surface-container-low p-3 rounded-xl rounded-tl-none border border-outline-variant/20" id="assistantResponseEcho">
+<span class="text-[11px] font-bold text-secondary block mb-1">AI Saarthi (सारथी):</span>
+<p class="text-on-surface">हाँ, फंदा कलां एक ग्रामीण क्षेत्र (Rural Area) में आता है। PMEGP के तहत आपको 35% पूंजीगत सब्सिडी (₹2,97,500) मिलेगी। इसके लिए UdyamSetu का तैयार DPR बैंक में जमा करें।</p>
+</div>
+</div>
+<!-- Quick Vernacular Prompt Buttons -->
+<div class="space-y-1.5 pt-2 border-t border-outline-variant/20">
+<div class="text-[11px] font-semibold text-on-surface-variant">Quick Voice Prompts (पूछें):</div>
+<button class="w-full text-left px-2.5 py-1.5 bg-surface rounded-lg hover:bg-surface-container-low text-[12px] text-primary flex items-center justify-between" onclick="triggerAssistantPrompt('subsidy')">
+<span>"35% PMEGP सब्सिडी कैसे प्राप्त करें?"</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">play_arrow</span>
+</button>
+<button class="w-full text-left px-2.5 py-1.5 bg-surface rounded-lg hover:bg-surface-container-low text-[12px] text-primary flex items-center justify-between" onclick="triggerAssistantPrompt('machine')">
+<span>"इंदौर से दाल मिल मशीनरी की कीमत क्या है?"</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">play_arrow</span>
+</button>
+</div>
+<!-- Voice Input Action Row -->
+<div class="flex items-center gap-2 pt-1">
+<input class="flex-1 text-[13px] bg-surface border border-outline-variant/50 rounded-lg px-3 py-2 focus:ring-1 focus:ring-secondary focus:border-secondary" id="assistantInput" placeholder="Type or ask in Hindi/English..." type="text"/>
+<button class="p-2 bg-secondary text-white rounded-lg active:scale-95" onclick="submitAssistantQuery()">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+<!-- Floating Trigger Button -->
+<button class="flex items-center gap-2.5 px-4 py-3 bg-secondary hover:bg-secondary/90 text-on-secondary rounded-full elevation-3 shadow-xl active:scale-95 transition-all group" onclick="toggleVoiceAssistant()">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary-fixed"></span>
+</span>
+<span class="material-symbols-outlined text-[24px]">mic</span>
+<span class="font-label-md text-label-md font-bold pr-1">Ask Saarthi / सारथी</span>
+</button>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- JAVASCRIPT CONTROLLER & STATE LOGIC -->
+<!-- ========================================================================= -->
+<script>
+    // State Tracking
+    let currentStep = 1;
+    let activeView = 'landing';
+
+    // Switch Top-Level Application Views
+    function switchView(viewName) {
+      activeView = viewName;
+
+      // Hide all view sections
+      const sections = ['landing', 'onboarding', 'dashboard', 'simulator', 'schemes', 'blueprint', 'admin'];
+      sections.forEach(id => {
+        const el = document.getElementById('view-' + id);
+        if (el) el.classList.add('hidden');
+      });
+
+      // Show targeted view
+      const targetEl = document.getElementById('view-' + viewName);
+      if (targetEl) targetEl.classList.remove('hidden');
+
+      // Update Desktop Nav Tabs
+      sections.forEach(id => {
+        const navBtn = document.getElementById('nav-' + id);
+        if (navBtn) {
+          if (id === viewName) {
+            navBtn.className = "nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 font-semibold text-primary bg-surface-container-lowest shadow-sm";
+          } else {
+            navBtn.className = "nav-tab-btn px-3 py-1.5 rounded-lg font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-primary";
+          }
+        }
+      });
+
+      // Update Mobile Nav Tabs
+      sections.forEach(id => {
+        const botBtn = document.getElementById('bot-' + id);
+        if (botBtn) {
+          if (id === viewName) {
+            botBtn.className = "flex flex-col items-center justify-center text-primary px-2 py-1 font-semibold";
+          } else {
+            botBtn.className = "flex flex-col items-center justify-center text-on-surface-variant px-2 py-1";
+          }
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Onboarding Stepper Navigation
+    function goToStep(step) {
+      if (step < 1 || step > 5) return;
+      currentStep = step;
+
+      // Update Step Views
+      for (let i = 1; i <= 5; i++) {
+        const content = document.getElementById('step-content-' + i);
+        const bar = document.getElementById('step-bar-' + i);
+        const lbl = document.getElementById('step-lbl-' + i);
+
+        if (i === currentStep) {
+          content.classList.remove('hidden');
+          bar.className = "h-1.5 rounded-full bg-secondary transition-all";
+          lbl.className = "text-[11px] font-semibold text-secondary";
+        } else if (i < currentStep) {
+          content.classList.add('hidden');
+          bar.className = "h-1.5 rounded-full bg-secondary transition-all";
+          lbl.className = "text-[11px] font-semibold text-secondary";
+        } else {
+          content.classList.add('hidden');
+          bar.className = "h-1.5 rounded-full bg-outline-variant/40 transition-all";
+          lbl.className = "text-[11px] font-semibold text-on-surface-variant";
+        }
+      }
+
+      // Update Buttons
+      document.getElementById('stepPrevBtn').disabled = (currentStep === 1);
+      const nextBtn = document.getElementById('stepNextBtn');
+      if (currentStep === 5) {
+        nextBtn.innerHTML = '<span>Generate AI Advisory & Feasibility / परिणाम देखें</span><span class="material-symbols-outlined text-[18px]">verified</span>';
+        nextBtn.onclick = function() { switchView('dashboard'); };
+      } else {
+        nextBtn.innerHTML = '<span>Next Step / आगे बढ़ें</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span>';
+        nextBtn.onclick = function() { changeStep(1); };
+      }
+    }
+
+    function changeStep(delta) {
+      goToStep(currentStep + delta);
+    }
+
+    // Voice Simulation Helper
+    function simulateVoiceFill() {
+      const banner = document.getElementById('voice-recognized-banner');
+      banner.classList.remove('hidden');
+      setTimeout(() => {
+        goToStep(5);
+      }, 900);
+    }
+
+    // Explainable AI (XAI) Drawer Toggle
+    function toggleExplainDrawer() {
+      const drawer = document.getElementById('xai-drawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // Interactive Financial Engine & What-If Recalculator
+    function recalcSimulator() {
+      const salesVol = parseFloat(document.getElementById('sliderSalesVol').value);
+      const rawCost = parseFloat(document.getElementById('sliderRawCost').value);
+      const salePrice = parseFloat(document.getElementById('sliderSalePrice').value);
+      const interestRate = parseFloat(document.getElementById('sliderInterest').value);
+
+      // Label updates
+      document.getElementById('lblSalesVol').innerText = salesVol + " Quintals (" + (salesVol >= 100 ? "+" : "") + (salesVol - 100) + "%)";
+      document.getElementById('lblRawCost').innerText = "₹" + rawCost.toFixed(2) + " / kg";
+      document.getElementById('lblSalePrice').innerText = "₹" + salePrice.toFixed(2) + " / kg";
+      document.getElementById('lblInterest').innerText = interestRate.toFixed(1) + "% (" + (interestRate <= 9 ? "Mudra/PMEGP" : "Commercial") + ")";
+
+      // Financial formulas (1 Quintal = 100 kg)
+      // Pulse processing yield: 76% dal recovery, 18% chuni/bhusa cattle feed (₹22/kg), 6% wastage
+      const totalKg = salesVol * 100;
+      const dalKg = totalKg * 0.76;
+      const huskKg = totalKg * 0.18;
+
+      const monthlyRevenue = (dalKg * salePrice) + (huskKg * 22.0);
+      const rawMaterialExpense = totalKg * rawCost;
+      const powerExpense = 11400; // Fixed subsidised feeder
+      const laborExpense = 14000; // 2 helpers + milling operator
+      const packagingExpense = dalKg * 1.8; // ₹1.80 per 1kg pouch
+      
+      // Loan EMI calculation on ₹5,52,500 bank portion
+      const principal = 552500;
+      const r = (interestRate / 12) / 100;
+      const n = 60; // 5 years
+      const monthlyEMI = (principal * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+
+      const totalOpEx = rawMaterialExpense + powerExpense + laborExpense + packagingExpense + monthlyEMI;
+      const netProfit = monthlyRevenue - totalOpEx;
+      const marginPct = (netProfit / monthlyRevenue) * 100;
+
+      // Update Dynamic Visuals
+      const dynNet = document.getElementById('dynNetProfit');
+      const dynMargin = document.getElementById('dynMargin');
+      const dynAnnual = document.getElementById('dynAnnualProfit');
+      const alertBox = document.getElementById('simAlertBox');
+
+      dynNet.innerText = "₹" + Math.round(netProfit).toLocaleString('en-IN');
+      dynMargin.innerText = "Net Margin: " + marginPct.toFixed(1) + "%";
+      dynAnnual.innerText = "₹" + Math.round(netProfit * 12).toLocaleString('en-IN');
+
+      if (netProfit < 25000) {
+        dynNet.className = "mt-2 font-display-lg-mobile text-display-lg-mobile font-bold text-error";
+        alertBox.className = "p-3.5 rounded-xl border border-error/30 bg-error-container/20 text-body-sm flex items-start gap-2.5";
+        alertBox.innerHTML = '<span class="material-symbols-outlined text-error text-[20px]">warning</span><div><strong class="text-error">High Financial Stress:</strong><p class="text-on-surface-variant text-[12px] mt-0.5">Operating margin dropped below 6%. Consider raising sale price or securing FPO procurement forward contracts.</p></div>';
+      } else {
+        dynNet.className = "mt-2 font-display-lg-mobile text-display-lg-mobile font-bold text-secondary";
+        alertBox.className = "p-3.5 rounded-xl border border-secondary/30 bg-secondary-container/20 text-body-sm flex items-start gap-2.5";
+        alertBox.innerHTML = '<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span><div><strong class="text-secondary">Viable & Safe Margin:</strong><p class="text-on-surface-variant text-[12px] mt-0.5">DSCR coverage is healthy at ' + (netProfit / (monthlyEMI || 1)).toFixed(1) + 'x. Bank credit appraisal remains positive.</p></div>';
+      }
+    }
+
+    function resetSimulation() {
+      document.getElementById('sliderSalesVol').value = 100;
+      document.getElementById('sliderRawCost').value = 74;
+      document.getElementById('sliderSalePrice').value = 118;
+      document.getElementById('sliderInterest').value = 8.5;
+      recalcSimulator();
+    }
+
+    // Voice Assistant Drawer
+    function toggleVoiceAssistant() {
+      const modal = document.getElementById('voiceAssistantModal');
+      modal.classList.toggle('hidden');
+    }
+
+    function triggerAssistantPrompt(type) {
+      const modal = document.getElementById('voiceAssistantModal');
+      modal.classList.remove('hidden');
+
+      const userEcho = document.getElementById('assistantUserEcho');
+      const userText = document.getElementById('assistantUserEchoText');
+      const respEcho = document.getElementById('assistantResponseEcho');
+
+      userEcho.classList.remove('hidden');
+      if (type === 'subsidy' || type === 'dal-mill') {
+        userText.innerText = "क्या मुझे फंदा कलां दाल मिल के लिए 35% PMEGP सब्सिडी मिल सकती है?";
+      } else {
+        userText.innerText = "इंदौर क्लस्टर से मिनी दाल मिल मशीनरी की लागत क्या होगी?";
+      }
+
+      setTimeout(() => {
+        respEcho.classList.remove('hidden');
+      }, 400);
+    }
+
+    function submitAssistantQuery() {
+      const input = document.getElementById('assistantInput');
+      if (!input.value.trim()) return;
+
+      const userEcho = document.getElementById('assistantUserEcho');
+      const userText = document.getElementById('assistantUserEchoText');
+      const respEcho = document.getElementById('assistantResponseEcho');
+
+      userEcho.classList.remove('hidden');
+      userText.innerText = input.value;
+      input.value = '';
+
+      setTimeout(() => {
+        respEcho.classList.remove('hidden');
+      }, 500);
+    }
+
+    // Action Helpers
+    function triggerSchemeApplication(scheme) {
+      alert("✅ UdyamSetu Intelligence: " + scheme + " Bank Application Dossier generated for Rameshwar Patel (Bhopal Cluster). Ready for DIC verification.");
+    }
+
+    function triggerDPRDownload() {
+      alert("📄 Downloading 'Detailed_Project_Report_DalMill_Bhopal_PMEGP.pdf' (18 Pages MSME Aligned format).");
+    }
+
+    function triggerAudioBrief() {
+      alert("🎙 ऑडियो सार चालू है: 'नमस्कार रामेश्वर जी, आपकी 90 दिवसीय दाल मिल कार्ययोजना का सारांश...'");
+    }
+
+    function sharePlan() {
+      alert("📲 Sharing Structured DPR & Feasibility link with Central Bank of India (Phanda Branch Manager) via SMS & WhatsApp.");
+    }
+  </script>
+</body></html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UdyamSetu | Financial Structuring &amp; DPR Simulator</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#005137",
+            "on-secondary-fixed": "#002114",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#85f8c4",
+            "surface-container-low": "#eff4ff",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#d2e4ff",
+            "tertiary": "#1c0a00",
+            "on-primary-fixed": "#001c37",
+            "on-tertiary-container": "#d27200",
+            "surface-container-highest": "#d5e3fc",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-bright": "#f8f9ff",
+            "background": "#f8f9ff",
+            "on-primary-container": "#768dad",
+            "secondary-fixed-dim": "#68dba9",
+            "on-surface": "#0d1c2e",
+            "outline-variant": "#c4c6ce",
+            "tertiary-fixed-dim": "#ffb77d",
+            "secondary": "#006c4a",
+            "inverse-primary": "#b0c8eb",
+            "on-surface-variant": "#43474d",
+            "surface": "#f8f9ff",
+            "on-primary-fixed-variant": "#314865",
+            "surface-variant": "#d5e3fc",
+            "on-secondary-container": "#00714e",
+            "inverse-surface": "#233144",
+            "surface-container-high": "#dce9ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#6e3900",
+            "on-error-container": "#93000a",
+            "outline": "#74777e",
+            "surface-container": "#e6eeff",
+            "secondary-container": "#82f5c1",
+            "surface-tint": "#49607e",
+            "primary-fixed-dim": "#b0c8eb",
+            "on-tertiary-fixed": "#2f1500",
+            "primary-container": "#0a2540",
+            "on-background": "#0d1c2e",
+            "tertiary-fixed": "#ffdcc3",
+            "tertiary-container": "#3b1c00",
+            "surface-dim": "#ccdbf3",
+            "inverse-on-surface": "#eaf1ff",
+            "primary": "#000f22"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-lg": "3rem",
+            "margin-md": "2rem",
+            "gutter-md": "1.5rem",
+            "gutter-lg": "2rem",
+            "gutter": "1rem",
+            "space-2xl": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "numeric-data": ["Inter"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "bilingual-indicator": ["Inter"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"]
+          },
+          "fontSize": {
+            "numeric-data": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "display-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "bilingual-indicator": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #0a2540;
+      cursor: pointer;
+      border: 2px solid #82f5c1;
+      box-shadow: 0 1px 4px rgba(10,37,64,0.3);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-28">
+<!-- TopAppBar Component (from Shared JSON) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest dark:bg-primary-container shadow-[0px_1px_3px_rgba(10,37,64,0.04)]">
+<div class="max-w-7xl mx-auto h-16 px-4 md:px-6 flex justify-between items-center">
+<!-- Brand Cluster -->
+<div class="flex items-center space-x-3">
+<img alt="UdyamSetu Logo" class="w-9 h-9 rounded-md object-contain shadow-sm border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/AEtjO1WgqPPEaYCbNn58_GTBXOpfNvkzv-0nDF4ureN9yxnrYXa9EdmD6ZUrBDNHIf88hlsE3uwdxPds6QhPVCduTz-wYXS1CJ3QzO--PwS68JFa-FOk8AEYDEBNDvRR8fCvPtSmOcq8dldA9ssKZPtMOeiqo165hLJAwnYegdzJ50dwV7EAY8DLfFCnRMmjpZ-2l7aOGaMXRt8iALq9uf2QxGHUmMFeqiLC-dNdp49uoUPITufIoUyCAv2ydw7r"/>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed font-bold tracking-tight">UdyamSetu</span>
+<span class="text-on-surface-variant font-bilingual-indicator text-bilingual-indicator border-l border-outline-variant/60 pl-2">उद्यम सेतु</span>
+</div>
+<p class="text-xs text-on-surface-variant hidden sm:block font-body-sm">National MSME Structuring &amp; DPR Gateway</p>
+</div>
+</div>
+<!-- Navigation Cluster (Desktop) -->
+<nav class="hidden md:flex items-center space-x-1 lg:space-x-3">
+<a class="px-3 py-1.5 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-primary text-label-md font-label-md transition-colors duration-150" href="#">
+          Dashboard / मुख्य
+        </a>
+<a class="px-3 py-1.5 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-primary text-label-md font-label-md transition-colors duration-150" href="#">
+          Schemes / योजनाएं
+        </a>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary dark:text-primary-fixed font-semibold text-label-md font-label-md transition-colors duration-150 flex items-center space-x-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Simulator / सिमुलेटर</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-primary text-label-md font-label-md transition-colors duration-150" href="#">
+          Roadmap / लक्ष्य
+        </a>
+<a class="px-3 py-1.5 rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-primary text-label-md font-label-md transition-colors duration-150" href="#">
+          Advisory / सलाह
+        </a>
+</nav>
+<!-- Trailing Action Icons -->
+<div class="flex items-center space-x-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors active:scale-95 duration-100 ease-out" title="Translate / भाषा बदलें">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors active:scale-95 duration-100 ease-out" title="Voice Assistant / आवाज सहायता">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors active:scale-95 duration-100 relative ease-out">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas Content -->
+<main class="max-w-7xl mx-auto px-4 md:px-6 pt-24 space-y-6">
+<!-- Screen Title & Status Banner -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-surface-container-lowest p-4 md:p-6 rounded-2xl border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)]">
+<div class="space-y-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Financial Structuring Engine &amp; Simulator</h1>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary/10 text-secondary border border-secondary/20">
+            Grain &amp; Pulse Processing DPR Model
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          प्रोजेक्ट वित्तीय संरचना एवं संवेदनशीलता विश्लेषण (SBI / PNB / BoB दिशा-निर्देश आधारित)
+        </p>
+</div>
+<!-- Live Bankable Status Badge -->
+<div class="flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-secondary-fixed/30 border border-secondary/20 shadow-sm self-start md:self-auto">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<div class="font-headline-sm text-[13px] text-on-secondary-fixed-variant leading-tight">🏦 बैंक-स्वीकृत गणना (Bankable DPR Financial Model)</div>
+<div class="font-bilingual-indicator text-[11px] text-secondary">CMA Data Verified • 35% Capital Subsidy Mapped</div>
+</div>
+</div>
+</div>
+<!-- 1. Executive Financial Summary Cards (4-grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Total Capital -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] border-t-[3px] border-t-primary-container relative">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md font-semibold">Total Capital Required</span>
+<span class="material-symbols-outlined text-[20px] text-primary">account_balance_wallet</span>
+</div>
+<div class="font-numeric-data text-2xl font-bold text-primary">₹8,50,000</div>
+<div class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant mt-1">कुल परियोजना लागत (Fixed + Working)</div>
+<div class="mt-3 flex items-center gap-1.5 text-xs text-on-surface-variant font-body-sm">
+<span class="text-secondary font-semibold">₹1.25L</span> Promoter Margin (15%)
+        </div>
+</div>
+<!-- Card 2: PMEGP 35% Govt Subsidy -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] border-t-[3px] border-t-secondary relative overflow-hidden">
+<div class="absolute -right-3 -bottom-3 text-secondary/5 pointer-events-none">
+<span class="material-symbols-outlined text-[80px]">savings</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md font-semibold">PMEGP 35% Govt Subsidy</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">verified</span>
+</div>
+<div class="font-numeric-data text-2xl font-bold text-secondary">₹2,97,500</div>
+<div class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant mt-1">अनुदान (Free Capital Contribution)</div>
+<div class="mt-3 flex items-center gap-1.5 text-xs text-on-surface-variant font-body-sm">
+<span class="px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-medium">Locked in TDR for 3 yrs</span>
+</div>
+</div>
+<!-- Card 3: Monthly Net Profit -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] border-t-[3px] border-t-primary-container relative">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md font-semibold">Monthly Net Profit</span>
+<span class="material-symbols-outlined text-[20px] text-primary">trending_up</span>
+</div>
+<div class="font-numeric-data text-2xl font-bold text-primary" id="cardMonthlyProfit">₹72,800</div>
+<div class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant mt-1">मासिक शुद्ध लाभ (After EMI &amp; Overheads)</div>
+<div class="mt-3 flex items-center gap-1.5 text-xs text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+<span>18.6% Net Operating Margin</span>
+</div>
+</div>
+<!-- Card 4: Break-Even Period -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] border-t-[3px] border-t-secondary relative">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md font-semibold">Break-Even Period</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">timelapse</span>
+</div>
+<div class="font-numeric-data text-2xl font-bold text-primary">7.2 Months</div>
+<div class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant mt-1">लागत वापसी (Project Payback Cycle)</div>
+<div class="mt-3 flex items-center gap-1.5 text-xs text-on-surface-variant font-body-sm">
+          Project Internal Rate of Return (IRR): <span class="text-secondary font-bold">34.2%</span>
+</div>
+</div>
+</section>
+<!-- 2. Interactive What-If Sensitivity Simulator Panel (5-col / 7-col split) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Column (5 Cols): Dynamic Sliders & Parameter Controls -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-2xl p-5 md:p-6 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">tune</span>
+              Sensitivity Parameters
+            </h2>
+<p class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant">पैरामीटर संवेदनशीलता नियंत्रण (Live Adjust)</p>
+</div>
+<button class="px-2.5 py-1 text-xs text-on-surface-variant hover:text-primary rounded border border-outline-variant/60 hover:bg-surface transition" onclick="resetSliders()">
+            Reset
+          </button>
+</div>
+<div class="space-y-5">
+<!-- Slider 1: Raw Material Procurement -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary">
+                Raw Material Procurement Price / कच्चा माल दर
+              </label>
+<span class="font-numeric-data text-primary text-sm font-bold" id="valProcurement">₹68 / kg</span>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary-container" id="sliderProcurement" max="80" min="62" oninput="updateSimulation()" step="1" type="range" value="68"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>₹62/kg (Bumper Harvest)</span>
+<span class="font-semibold text-primary">Base: ₹68</span>
+<span>₹80/kg (Drought Stress)</span>
+</div>
+</div>
+<!-- Slider 2: Finished Pulse Selling Price -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary">
+                Finished Pulse Selling Price / तैयार दाल विक्रय मूल्य
+              </label>
+<span class="font-numeric-data text-secondary text-sm font-bold" id="valSelling">₹112 / kg</span>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-secondary" id="sliderSelling" max="130" min="95" oninput="updateSimulation()" step="1" type="range" value="112"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>₹95/kg (Mandi Glut)</span>
+<span class="font-semibold text-secondary">Default: ₹112</span>
+<span>₹130/kg (Premium Retail)</span>
+</div>
+</div>
+<!-- Slider 3: Production Capacity Utilization -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary">
+                Capacity Utilization / उत्पादन क्षमता उपयोग
+              </label>
+<span class="font-numeric-data text-primary text-sm font-bold" id="valCapacity">75% (150 Qtl/mo)</span>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary-container" id="sliderCapacity" max="100" min="40" oninput="updateSimulation()" step="5" type="range" value="75"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>40% (80 Quintals)</span>
+<span>75% (Current)</span>
+<span>100% (200 Quintals)</span>
+</div>
+</div>
+<!-- Slider 4: Diesel / Electricity Cost Shock -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-primary">
+                Power &amp; Fuel Cost Shock / बिजली व डीजल वृद्धि
+              </label>
+<span class="font-numeric-data text-error text-sm font-bold" id="valShock">+0% (Baseline)</span>
+</div>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-error" id="sliderShock" max="25" min="0" oninput="updateSimulation()" step="5" type="range" value="0"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>0% Normal Tariff</span>
+<span>+15% Peak Tariff</span>
+<span>+25% Maximum Shock</span>
+</div>
+</div>
+<!-- Loan Tenure & Rate Badge -->
+<div class="p-3.5 bg-surface-container-low rounded-xl border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary-container text-[22px]">real_estate_agent</span>
+<div>
+<div class="font-label-md text-label-md text-primary font-semibold">Assumed Bank Debt Structure</div>
+<div class="text-xs text-on-surface-variant">Term Loan: ₹5,52,500 | 5 Years @ 8.5% p.a.</div>
+</div>
+</div>
+<span class="text-xs font-semibold px-2 py-1 bg-surface-container-lowest text-primary rounded border border-outline-variant/40">
+              ₹11,420/mo
+            </span>
+</div>
+</div>
+</div>
+<!-- Right Column (7 Cols): Real-time Live Impact & Cash Flow Chart -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-5 md:p-6 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant/30 pb-4 gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">analytics</span>
+              Stress Test Impact Analysis (Base vs Simulated)
+            </h2>
+<p class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant">
+              वास्तविक समय तुलनात्मक वित्तीय प्रभाव
+            </p>
+</div>
+<!-- DSCR Highlight Chip -->
+<div class="flex items-center space-x-2 px-3 py-1.5 bg-secondary/10 border border-secondary/30 rounded-lg">
+<span class="text-xs font-semibold text-secondary">DSCR:</span>
+<span class="font-numeric-data text-secondary text-sm font-bold" id="dscrValue">2.45</span>
+<span class="text-[10px] text-secondary font-medium px-1 bg-secondary-fixed/50 rounded">SBI Grade-A</span>
+</div>
+</div>
+<!-- 4 Sub-Metrics Comparison -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="p-3 bg-surface rounded-xl border border-outline-variant/30">
+<div class="text-[11px] text-on-surface-variant font-label-sm">Gross Revenue</div>
+<div class="font-numeric-data text-base font-bold text-primary mt-1" id="metricGross">₹3,92,000</div>
+<div class="text-[10px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+              Base: ₹3.92L
+            </div>
+</div>
+<div class="p-3 bg-surface rounded-xl border border-outline-variant/30">
+<div class="text-[11px] text-on-surface-variant font-label-sm">Operating Costs</div>
+<div class="font-numeric-data text-base font-bold text-on-surface mt-1" id="metricOpex">₹3,07,780</div>
+<div class="text-[10px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+              Base: ₹3.07L
+            </div>
+</div>
+<div class="p-3 bg-surface rounded-xl border border-outline-variant/30">
+<div class="text-[11px] text-on-surface-variant font-label-sm">Bank EMI</div>
+<div class="font-numeric-data text-base font-bold text-primary mt-1">₹11,420</div>
+<div class="text-[10px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+              Fixed for 60 mos
+            </div>
+</div>
+<div class="p-3 bg-secondary/10 rounded-xl border border-secondary/30">
+<div class="text-[11px] text-secondary font-label-sm font-semibold">Net Cash Surplus</div>
+<div class="font-numeric-data text-base font-bold text-secondary mt-1" id="metricSurplus">₹72,800</div>
+<div class="text-[10px] text-secondary font-medium flex items-center gap-0.5 mt-0.5" id="surplusDelta">
+              Baseline Target
+            </div>
+</div>
+</div>
+<!-- 12-Month Projected Cash Flow Chart -->
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1.5">
+<span>12-Month Cumulative Cash Flow &amp; Break-Even Curve</span>
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant text-[11px]">
+<span class="flex items-center gap-1"><span class="w-3 h-0.5 bg-secondary inline-block"></span> Cumulative Net</span>
+<span class="flex items-center gap-1"><span class="w-3 h-0.5 bg-error inline-block"></span> Break-Even (Month 7)</span>
+</div>
+</div>
+<!-- Synthetic High-Fidelity SVG Cash Flow Graph -->
+<div class="w-full bg-surface rounded-xl p-3.5 border border-outline-variant/40 relative">
+<svg class="w-full h-44 overflow-visible" preserveaspectratio="none" viewbox="0 0 540 180">
+<!-- Grid Lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="520" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="520" y1="60" y2="60"></line>
+<line stroke="#CBD5E1" stroke-width="1.5" x1="40" x2="520" y1="100" y2="100"></line> <!-- Zero axis -->
+<line stroke="#E2E8F0" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="520" y1="140" y2="140"></line>
+<!-- Y Axis labels -->
+<text fill="#64748B" font-family="Inter" font-size="9" x="5" y="24">+₹6L</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="5" y="64">+₹3L</text>
+<text fill="#0A2540" font-family="Inter" font-size="9" font-weight="600" x="12" y="104">₹0</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="5" y="144">-₹2.5L</text>
+<!-- Break-even vertical inflection indicator at Month 7 (x = 310) -->
+<line stroke="#BA1A1A" stroke-dasharray="4,3" stroke-width="1.5" x1="310" x2="310" y1="10" y2="160"></line>
+<circle cx="310" cy="100" fill="#BA1A1A" r="4.5" stroke="#FFFFFF" stroke-width="2"></circle>
+<!-- Shaded gradient under curve -->
+<defs>
+<lineargradient id="curveGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#82f5c1" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#82f5c1" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 50 155 Q 160 145, 240 125 T 310 100 T 400 55 T 510 25 L 510 100 L 310 100 Z" fill="url(#curveGradient)"></path>
+<!-- Cumulative Curve Line -->
+<path d="M 50 155 Q 160 145, 240 125 T 310 100 T 400 55 T 510 25" fill="none" id="graphCurve" stroke="#006c4a" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Points -->
+<circle cx="50" cy="155" fill="#006c4a" r="3.5"></circle>
+<circle cx="180" cy="138" fill="#006c4a" r="3.5"></circle>
+<circle cx="310" cy="100" fill="#BA1A1A" r="3.5"></circle>
+<circle cx="440" cy="45" fill="#006c4a" r="3.5"></circle>
+<circle cx="510" cy="25" fill="#006c4a" r="4" stroke="#FFFFFF" stroke-width="1.5"></circle>
+<!-- X Axis Labels (Months) -->
+<text fill="#64748B" font-family="Inter" font-size="9" x="45" y="172">M1</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="90" y="172">M2</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="135" y="172">M3</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="178" y="172">M4</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="222" y="172">M5</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="265" y="172">M6</text>
+<text fill="#BA1A1A" font-family="Inter" font-size="10" font-weight="700" x="302" y="172">M7 (B/E)</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="352" y="172">M8</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="395" y="172">M9</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="438" y="172">M10</text>
+<text fill="#64748B" font-family="Inter" font-size="9" x="480" y="172">M11</text>
+<text fill="#006c4a" font-family="Inter" font-size="9" font-weight="600" x="505" y="172">M12</text>
+</svg>
+<!-- Inflection Badge Overlay -->
+<div class="absolute top-4 left-1/2 -translate-x-12 bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/60 shadow-sm rounded-lg px-2 py-1 text-[11px] text-primary">
+              ⚡ Inflection: <span class="font-bold text-error">Month 7.2</span> (100% Capital Recovered)
+            </div>
+</div>
+</div>
+<!-- Bank Underwriter Sanction Assessment -->
+<div class="p-3.5 bg-surface-container-low/60 rounded-xl border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">verified</span>
+<div class="text-xs space-y-0.5">
+<span class="font-semibold text-primary">Bank Underwriter Ready Checklist:</span>
+<p class="text-on-surface-variant font-body-sm">
+              Average projected DSCR of <strong class="text-secondary">2.45</strong> exceeds RBI's minimum threshold of 1.50 for agricultural processing credit lines. Loan risk category classified as <span class="text-secondary font-semibold">Low-Tier Investment Grade</span>.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Government Scheme Optimization & Subsidy Matrix -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+            Government Scheme Optimization &amp; Subsidy Matrix
+          </h2>
+<p class="font-bilingual-indicator text-bilingual-indicator text-on-surface-variant">
+            उपलब्ध केंद्रीय एवं राज्य स्तरीय सब्सिडी संयोजन (Automated Optimal Stacking)
+          </p>
+</div>
+<span class="text-xs text-secondary font-semibold px-2.5 py-1 bg-secondary/10 rounded-full border border-secondary/20 hidden sm:inline-block">
+          Auto-Mapped for Max Subsidy
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Scheme 1: PMEGP -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] flex flex-col justify-between hover:border-outline transition-colors">
+<div class="space-y-3">
+<div class="flex items-start justify-between">
+<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary/15 text-secondary border border-secondary/30">
+                35% Rural Subsidy
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">PMEGP</h3>
+<p class="text-xs text-on-surface-variant font-body-sm">Prime Minister Employment Generation Programme</p>
+</div>
+<div class="p-3 bg-surface rounded-xl space-y-1 text-xs">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Subsidy Amount:</span>
+<span class="font-numeric-data font-bold text-secondary">₹2,97,500</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Margin Money:</span>
+<span class="font-medium text-primary">5% Special Cat.</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Lock-in Period:</span>
+<span class="font-medium text-primary">3 Years (TDR)</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-xs">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Pre-Eligible
+            </span>
+<a class="text-primary font-semibold hover:underline flex items-center" href="#">
+              View Guidelines <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Scheme 2: PM Mudra (Kishore) -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] flex flex-col justify-between hover:border-outline transition-colors">
+<div class="space-y-3">
+<div class="flex items-start justify-between">
+<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-surface-container-high text-primary border border-outline-variant/40">
+                Zero Collateral
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">assured_workload</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">PM Mudra (Kishore)</h3>
+<p class="text-xs text-on-surface-variant font-body-sm">Pradhan Mantri MUDRA Yojana Micro-Credit</p>
+</div>
+<div class="p-3 bg-surface rounded-xl space-y-1 text-xs">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Sanctioned Amount:</span>
+<span class="font-numeric-data font-bold text-primary">₹5,00,000</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Interest Rate:</span>
+<span class="font-medium text-secondary">8.50% Fixed p.a.</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Guarantee:</span>
+<span class="font-medium text-primary">CGFMU Backed</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-xs">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Pre-Eligible
+            </span>
+<a class="text-primary font-semibold hover:underline flex items-center" href="#">
+              View Guidelines <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Scheme 3: PMFME Seed Capital -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-outline-variant/40 shadow-[0px_1px_3px_rgba(10,37,64,0.04)] flex flex-col justify-between hover:border-outline transition-colors">
+<div class="space-y-3">
+<div class="flex items-start justify-between">
+<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary/15 text-secondary border border-secondary/30">
+                Seed Capital Grant
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">storefront</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">PMFME Scheme</h3>
+<p class="text-xs text-on-surface-variant font-body-sm">Formalisation of Micro Food Processing Enterprises</p>
+</div>
+<div class="p-3 bg-surface rounded-xl space-y-1 text-xs">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Seed Working Capital:</span>
+<span class="font-numeric-data font-bold text-secondary">₹40,000</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Branding Support:</span>
+<span class="font-medium text-primary">50% Grant-in-aid</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">ODOP Alignment:</span>
+<span class="font-medium text-secondary">Pulses / दाल प्रसंस्करण</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-xs">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Pre-Eligible
+            </span>
+<a class="text-primary font-semibold hover:underline flex items-center" href="#">
+              View Guidelines <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Direct Bank Branch Eligibility Checker Card -->
+<div class="bg-gradient-to-r from-surface-container-low to-surface p-5 rounded-2xl border border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center space-x-3.5">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">apartment</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold">
+              Check Direct Bank Branch Eligibility / शाखा पात्रता जांचें
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Lead Bank: <strong>SBI Agriprenuer Branch, Wardha Road (IFSC: SBIN0004218)</strong> • Chief Manager: Mr. A. Sharma (+91 712 254890)
+            </p>
+</div>
+</div>
+<button class="shrink-0 px-5 py-2.5 rounded-lg bg-primary-container text-white font-label-md text-label-md hover:bg-primary transition shadow-sm flex items-center space-x-2">
+<span>Schedule Bank Manager Meeting</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</section>
+</main>
+<!-- 4. Action Bar at Bottom (Sticky above BottomNav) -->
+<div class="fixed bottom-14 md:bottom-0 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-md border-t border-outline-variant/40 py-3 shadow-[0px_-4px_12px_rgba(10,37,64,0.06)]">
+<div class="max-w-7xl mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center space-x-2 text-xs text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span>DPR Structure Status: <strong class="text-primary">100% Ready for Bank Submission (CMA Format)</strong></span>
+</div>
+<div class="flex items-center space-x-3 w-full sm:w-auto justify-end">
+<!-- Voice Explanation Action -->
+<button class="flex-1 sm:flex-initial px-4 py-2.5 rounded-lg border border-outline-variant/80 hover:bg-surface-container-low text-primary font-label-md text-label-md flex items-center justify-center space-x-2 transition active:scale-95 duration-100 ease-out" onclick="toggleVoiceExplanation()">
+<span class="material-symbols-outlined text-secondary text-[20px]">mic</span>
+<span>🎙 आवाज में समझें (Hindi Voice)</span>
+</button>
+<!-- DPR Download Primary Button -->
+<button class="flex-1 sm:flex-initial px-5 py-2.5 rounded-lg bg-primary-container hover:bg-[#1E3A8A] text-white font-label-md text-label-md flex items-center justify-center space-x-2 shadow-sm transition active:scale-95 duration-100 ease-out" onclick="simulateDPRDownload()">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">download</span>
+<span>📥 बैंक हेतु प्रोजेक्ट रिपोर्ट (Download 12-Page DPR)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar Component (from Shared JSON, Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-2 safe-bottom bg-surface-container-lowest dark:bg-primary-container shadow-[0px_-2px_8px_rgba(10,37,64,0.04)]">
+<!-- Item 1: Dashboard -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-label-sm font-label-sm mt-0.5">Dashboard / मुख्य</span>
+</a>
+<!-- Item 2: Schemes -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="text-label-sm font-label-sm mt-0.5">Schemes / योजनाएं</span>
+</a>
+<!-- Item 3: Simulator (Active Tab according to Shared JSON rules) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-lg px-3 py-1.5 font-semibold active:scale-95 transition-transform duration-100 ease-out" href="#">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+<span class="text-label-sm font-label-sm mt-0.5">Simulator / गणना</span>
+</a>
+<!-- Item 4: Roadmap -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#">
+<span class="material-symbols-outlined text-[20px]">timeline</span>
+<span class="text-label-sm font-label-sm mt-0.5">Roadmap / लक्ष्य</span>
+</a>
+<!-- Item 5: Advisory -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface px-2 py-1.5 active:scale-95 transition-transform duration-100 ease-out" href="#">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+<span class="text-label-sm font-label-sm mt-0.5">Advisory / सलाह</span>
+</a>
+</nav>
+<!-- Interactive Simulator Script (Vanilla JS) -->
+<script>
+    function updateSimulation() {
+      const procurement = parseFloat(document.getElementById('sliderProcurement').value);
+      const selling = parseFloat(document.getElementById('sliderSelling').value);
+      const capacity = parseFloat(document.getElementById('sliderCapacity').value);
+      const shock = parseFloat(document.getElementById('sliderShock').value);
+
+      // Label Updates
+      document.getElementById('valProcurement').innerText = `₹${procurement} / kg`;
+      document.getElementById('valSelling').innerText = `₹${selling} / kg`;
+      const quintals = Math.round((capacity / 100) * 200);
+      document.getElementById('valCapacity').innerText = `${capacity}% (${quintals} Qtl/mo)`;
+      document.getElementById('valShock').innerText = `+${shock}% ${shock === 0 ? '(Baseline)' : 'Surge'}`;
+
+      // Realistic Math Model for Pulse Processing
+      // Monthly output (kg) = quintals * 100 * 0.72 (yield after processing)
+      const finishedKg = quintals * 100 * 0.72;
+      const rawKg = quintals * 100;
+      
+      const grossRev = finishedKg * selling;
+      const rawCost = rawKg * procurement;
+      const basePowerFuel = 24000;
+      const shockedPower = basePowerFuel * (1 + shock / 100);
+      const laborPackaging = quintals * 85; 
+      const otherOverheads = 12000;
+      const emi = 11420;
+
+      const totalOpex = rawCost + shockedPower + laborPackaging + otherOverheads;
+      const netSurplus = grossRev - totalOpex - emi;
+
+      // Update UI displays
+      document.getElementById('metricGross').innerText = `₹${Math.round(grossRev).toLocaleString('en-IN')}`;
+      document.getElementById('metricOpex').innerText = `₹${Math.round(totalOpex).toLocaleString('en-IN')}`;
+      document.getElementById('metricSurplus').innerText = `₹${Math.round(netSurplus).toLocaleString('en-IN')}`;
+      document.getElementById('cardMonthlyProfit').innerText = `₹${Math.round(netSurplus).toLocaleString('en-IN')}`;
+
+      // Calculate DSCR = (Net Profit + Depr + Interest) / Total Debt Service
+      const dscr = Math.max(0.8, ((netSurplus + 8000 + 4000) / emi)).toFixed(2);
+      const dscrEl = document.getElementById('dscrValue');
+      dscrEl.innerText = dscr;
+
+      const surplusDeltaEl = document.getElementById('surplusDelta');
+      if (netSurplus >= 72800) {
+        surplusDeltaEl.innerHTML = `<span class="text-secondary font-bold">▲ +₹${Math.round(netSurplus - 72800).toLocaleString('en-IN')}</span>`;
+      } else {
+        surplusDeltaEl.innerHTML = `<span class="text-error font-bold">▼ -₹${Math.round(72800 - netSurplus).toLocaleString('en-IN')}</span>`;
+      }
+
+      // Dynamic curve adjust
+      const curve = document.getElementById('graphCurve');
+      const inflectionY = Math.min(130, Math.max(70, 100 - (netSurplus - 72800) / 2000));
+      curve.setAttribute('d', `M 50 155 Q 160 145, 240 125 T 310 ${inflectionY} T 400 ${inflectionY - 45} T 510 20`);
+    }
+
+    function resetSliders() {
+      document.getElementById('sliderProcurement').value = 68;
+      document.getElementById('sliderSelling').value = 112;
+      document.getElementById('sliderCapacity').value = 75;
+      document.getElementById('sliderShock').value = 0;
+      updateSimulation();
+    }
+
+    function toggleVoiceExplanation() {
+      alert("🎙️ 'नमस्ते! इस गणना के अनुसार, आपका दाल मिल प्रोजेक्ट 7.2 महीनों में ब्रेक-ईवेन हासिल कर लेगा। PMEGP के तहत ₹2.97 लाख की 35% सब्सिडी से बैंक का जोखिम न्यूनतम है और DSCR 2.45 बैंक ऋण स्वीकृति हेतु अनुकूल है।'\n\n(Playing High-Definition Bilingual Audio Stream)");
+    }
+
+    function simulateDPRDownload() {
+      alert("📥 'DPR_Wardha_Pulses_PMEGP_Model.pdf' (12-Page SBI/BoB Bank Format with CMA Financial Annexure) डाउनलोड शुरू हो गया है।");
+    }
+  </script>
+</body></html>
